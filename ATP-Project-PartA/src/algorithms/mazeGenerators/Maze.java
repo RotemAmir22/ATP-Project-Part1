@@ -54,11 +54,11 @@ public class Maze {
         else
             return -1;
     }
-    public Position getStartPoint() {
+    public Position getStartPosition() {
         return startPoint;
     }
 
-    public Position getEndPoint() {
+    public Position getGoalPosition() {
         return endPoint;
     }
 }
