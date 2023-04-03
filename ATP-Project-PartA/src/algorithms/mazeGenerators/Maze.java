@@ -22,7 +22,7 @@ public class Maze {
     {
         for(int i=0; i<maze.rows; i++)
         {
-            for(int j=0; j<maze.coloums; i++)
+            for(int j=0; j<maze.coloums; j++)
             {
                 maze.frame[i][j] = 1;
             }
