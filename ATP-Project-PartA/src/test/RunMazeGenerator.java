@@ -1,10 +1,9 @@
-package test;
 import algorithms.mazeGenerators.*;
 public class RunMazeGenerator {
     public static void main(String[] args) {
         testMazeGenerator(new EmptyMazeGenerator());
         testMazeGenerator(new SimpleMazeGenerator());
-        testMazeGenerator(new MyMazeGenerator());
+//        testMazeGenerator(new MyMazeGenerator());
     }
     private static void testMazeGenerator(IMazeGenerator mazeGenerator) {
 // prints the time it takes the algorithm to run
@@ -12,7 +11,7 @@ public class RunMazeGenerator {
 // generate another maze
         Maze maze = mazeGenerator.generate(100/*rows*/, 100/*columns*/);
 // prints the maze
-        maze.print();
+       // maze.print();
 // get the maze entrance
         Position startPosition = maze.getStartPosition();
 // print the start position
