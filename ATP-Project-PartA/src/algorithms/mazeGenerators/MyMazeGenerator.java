@@ -59,7 +59,10 @@ public class MyMazeGenerator extends AMazeGenerator {
                     setNeighbors(neighbors, predecessor, rows, colums);
                 }
             }
-            predecessor = currentP;
+            if(!neighbors.isEmpty())
+                predecessor = neighbors.get((int) (Math.random() * neighbors.size()));
+            else
+                setNeighbors(neighbors, currentP, rows, colums);;
         }
         return maze;
     }
