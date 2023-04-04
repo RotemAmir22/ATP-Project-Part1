@@ -35,9 +35,7 @@ public class Maze {
             this.frame[row][colum] = val;
     }
 
-    public int[][] getFrame() {
-        return frame;
-    }
+    public int[][] getFrame() {return frame;}
 
     public int getRows() {
         return rows;
@@ -80,6 +78,6 @@ public class Maze {
             }
             System.out.println();
         }
-    };
+    }
 }
 
