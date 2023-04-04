@@ -9,31 +9,29 @@ public class MyMazeGenerator extends AMazeGenerator {
      * @param colums high
      * @return the neighbors
      */
-    public ArrayList<Position> getNeighbors(Position point, int rows, int colums)
+    public void setNeighbors( ArrayList<Position> neighbors, Position point, int rows, int colums)
     {
-        ArrayList<Position> neighbors = new ArrayList<>();
         Position newP;
-        if(point.getRow() + 1 < rows) // SOUTH
+        if(point.getRowIndex() + 1 < rows) // SOUTH
         {
-            newP = new Position(point.getRow() + 1,colums);
+            newP = new Position(point.getRowIndex() + 1,colums);
             neighbors.add(newP);
         }
-        if(point.getRow() - 1 > rows) // NORTH
+        if(point.getRowIndex() - 1 > rows) // NORTH
         {
-            newP = new Position(point.getRow() - 1,colums);
+            newP = new Position(point.getRowIndex() - 1,colums);
             neighbors.add(newP);
         }
-        if(point.getColum() + 1 < rows) // EAST
+        if(point.getColumnIndex() + 1 < colums) // EAST
         {
-            newP = new Position(point.getColum() + 1,colums);
+            newP = new Position(point.getColumnIndex() + 1,colums);
             neighbors.add(newP);
         }
-        if(point.getColum() - 1 > rows) // WEST
+        if(point.getColumnIndex() - 1 > colums) // WEST
         {
-            newP = new Position(point.getColum() - 1,colums);
+            newP = new Position(point.getColumnIndex() - 1,colums);
             neighbors.add(newP);
         }
-        return neighbors;
 
     }
     @Override
@@ -43,49 +41,28 @@ public class MyMazeGenerator extends AMazeGenerator {
         // build maze and initialize with only walls
         Maze maze = new Maze(rows, colums);
         Maze.setAllMazeToWalls(maze);
-        Position point = new Position(0,0);
-        ArrayList<Position> neighbors = getNeighbors(point, rows, colums);
-        Position opposite = point;
+        Position point = new Position(0, 0);
+        ArrayList<Position> neighbors = new ArrayList<>();
+        setNeighbors(neighbors, point, rows, colums);
+        Position predecessor = point; // start point
         while (!neighbors.isEmpty()) {
 
             // pick current node at random
-            Position currentP = neighbors.remove((int)(Math.random() * neighbors.size()));
-            try {
-                // if both current point and its opposite are walls
-                if (maze.getCellValue(currentP.getRow(),currentP.getColum()) == 1) {
-                    if (maze.getCellValue(opposite.getRow(),opposite.getColum()) == 1) {
+            Position currentP = neighbors.remove((int) (Math.random() * neighbors.size()));
+            if (maze.getCellValue(currentP.getRowIndex(), currentP.getColumnIndex()) == 1) {
+                if (maze.getCellValue(predecessor.getRowIndex(), predecessor.getColumnIndex()) == 1) {
 
-                        // open path between the points
-                        maze.setCellInMaze(currentP.getRow(),currentP.getColum(), 0);
-                        maze.setCellInMaze(opposite.getRow(),opposite.getColum(), 0);
-
-                        // iterate through direct neighbors of node, same as earlier
-                        neighbors = getNeighbors()
-                        for (int x = -1; x <= 1; x++)
-                            for (int y = -1; y <= 1; y++) {
-                                if (x == 0 && y == 0 || x != 0 && y != 0)
-                                    continue;
-                                try {
-                                    if (maz[op.r + x][op.c + y] == '.') continue;
-                                } catch (Exception e) {
-                                    continue;
-                                }
-                                frontier.add(new Point(op.r + x, op.c + y, op));
-                            }
-                    }
+                    // open path between the points
+                    maze.setCellInMaze(currentP.getRowIndex(), currentP.getColumnIndex(), 0);
+                    maze.setCellInMaze(predecessor.getRowIndex(), predecessor.getColumnIndex(), 0);
+                    // iterate through direct neighbors of point, same as earlier
+                    setNeighbors(neighbors, predecessor, rows, colums);
                 }
-            } catch (Exception e) { // ignore NullPointer and ArrayIndexOutOfBounds
             }
-
-            opposite = currentP;
+            predecessor = currentP;
         }
-
-        // print final maze
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++)
-                System.out.print(maz[i][j]);
-            System.out.println();
-        }
+        return maze;
+    }
 
 
 }
