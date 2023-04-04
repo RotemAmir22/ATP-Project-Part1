@@ -1,7 +1,7 @@
 package algorithms.mazeGenerators;
 
 public class Position {
-   private int row;
+    private int row;
     private int colum;
 
     public Position(int row, int colum) {
@@ -15,11 +15,16 @@ public class Position {
         this.colum = colum;
     }
 
-    public int getRow() {
+    public int getRowIndex() {
         return row;
     }
 
-    public int getColum() {
+    public int getColumnIndex() {
         return colum;
+    }
+
+    @Override
+    public String toString() {
+       return"{"+getRowIndex()+","+getColumnIndex()+"}";
     }
 }

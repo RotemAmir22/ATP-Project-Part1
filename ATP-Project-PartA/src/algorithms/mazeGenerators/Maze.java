@@ -35,9 +35,7 @@ public class Maze {
             this.frame[row][colum] = val;
     }
 
-    public int[][] getFrame() {
-        return frame;
-    }
+    public int[][] getFrame() {return frame;}
 
     public int getRows() {
         return rows;
@@ -67,19 +65,19 @@ public class Maze {
             for (int j = 0; j < getColoums(); j++) {
 
                 if (i == 0 && j == 0) {
-                    System.out.print(" S "); // 'S' represents the entry point
+                    System.out.print(" \033[1;93mS\033[0m "); // 'S' represents the entry point
                 } else if (i == rows-1 && j == coloums-1) {
-                    System.out.print(" E "); // 'E' represents the exit point
+                    System.out.print(" \033[1;92mE\033[0m "); // 'E' represents the exit point
                 }
                 else if (this.frame[i][j] == 1) {
-                    System.out.print(" \u2610 "); // '*' represents a wall
+                    System.out.print(" \033[1;90m\u2B1B\033[0m "); // square represents a wall
                 }
                 else {
-                    System.out.print(" \u2605 "); // ' ' represents an empty cell
+                    System.out.print(" \033[1;96m\u2605\033[0m "); // ' ' represents an empty cell
                 }
             }
             System.out.println();
         }
-    };
+    }
 }
 
