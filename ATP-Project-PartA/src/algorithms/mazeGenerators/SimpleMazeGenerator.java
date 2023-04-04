@@ -87,7 +87,7 @@ public class SimpleMazeGenerator extends AMazeGenerator{
             for (int col = 0; col < maze.getColoums(); col++) {
                 if (maze.getCellValue(row, col) == 1) {
                     Position cell = cells.get(i++);
-                    maze.setCellInMaze(cell.getRow(), cell.getColum(), 0);
+                    maze.setCellInMaze(cell.getRowIndex(), cell.getColumnIndex(), 0);
                 }
             }
         }
