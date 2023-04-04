@@ -17,7 +17,7 @@ public class MyMazeGenerator extends AMazeGenerator {
             newP = new Position(point.getRowIndex() + 1,colums);
             neighbors.add(newP);
         }
-        if(point.getRowIndex() - 1 > 0) // NORTH
+        if(point.getRowIndex() - 1 >= 0) // NORTH
         {
             newP = new Position(point.getRowIndex() - 1,colums);
             neighbors.add(newP);
@@ -27,7 +27,7 @@ public class MyMazeGenerator extends AMazeGenerator {
             newP = new Position(rows,point.getColumnIndex() + 1);
             neighbors.add(newP);
         }
-        if(point.getColumnIndex() - 1 > 0) // WEST
+        if(point.getColumnIndex() - 1 >= 0) // WEST
         {
             newP = new Position(rows,point.getColumnIndex() - 1);
             neighbors.add(newP);
