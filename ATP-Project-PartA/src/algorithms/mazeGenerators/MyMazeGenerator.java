@@ -17,19 +17,19 @@ public class MyMazeGenerator extends AMazeGenerator {
             newP = new Position(point.getRowIndex() + 1,colums);
             neighbors.add(newP);
         }
-        if(point.getRowIndex() - 1 > rows) // NORTH
+        if(point.getRowIndex() - 1 > 0) // NORTH
         {
             newP = new Position(point.getRowIndex() - 1,colums);
             neighbors.add(newP);
         }
         if(point.getColumnIndex() + 1 < colums) // EAST
         {
-            newP = new Position(point.getColumnIndex() + 1,colums);
+            newP = new Position(rows,point.getColumnIndex() + 1);
             neighbors.add(newP);
         }
-        if(point.getColumnIndex() - 1 > colums) // WEST
+        if(point.getColumnIndex() - 1 > 0) // WEST
         {
-            newP = new Position(point.getColumnIndex() - 1,colums);
+            newP = new Position(rows,point.getColumnIndex() - 1);
             neighbors.add(newP);
         }
 
