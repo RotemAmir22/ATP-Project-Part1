@@ -28,6 +28,10 @@ public class SimpleMazeGenerator extends AMazeGenerator{
      */
     public void createPath(Maze maze, int rows, int colums)
     {
+        // check if reached end point
+        if(rows == maze.getRows() - 1 && colums == maze.getColoums() - 1)
+            return;
+
         maze.setCellInMaze(rows, colums, 0); // Make this cell open in the path
 
         Character[] directions = {'L', 'R', 'U', 'D'};
@@ -47,10 +51,6 @@ public class SimpleMazeGenerator extends AMazeGenerator{
 
             //update maze
             maze.setCellInMaze(newR, newC, 0);
-
-            // check if reached end point
-            if(newR == maze.getRows() - 1 && newC == maze.getColoums() - 1)
-                return;
 
             createPath(maze, newR, newC);
         }
