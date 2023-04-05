@@ -15,7 +15,10 @@ public class Maze {
         this.rows = rows;
         this.coloums = coloums;
         this.startPoint = new Position(0,0);
-        this.endPoint = new Position(rows - 1, coloums - 1);
+        if(rows == 0 && coloums == 0)
+            this.endPoint=startPoint;
+        else
+            this.endPoint = new Position(rows - 1, coloums - 1);
     }
 
     public static void setAllMazeToWalls(Maze maze)

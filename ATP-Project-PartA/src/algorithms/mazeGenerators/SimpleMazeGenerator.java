@@ -32,7 +32,7 @@ public class SimpleMazeGenerator extends AMazeGenerator{
         if(rows == maze.getRows() - 1 && colums == maze.getColoums() - 1)
             return;
 
-        maze.setCellInMaze(rows, colums, 0); // Make this cell open in the path
+       maze.setCellInMaze(rows, colums, 0); // Make this cell open in the path
 
         Character[] directions = {'L', 'R', 'U', 'D'};
         Collections.shuffle(Arrays.asList(directions));
