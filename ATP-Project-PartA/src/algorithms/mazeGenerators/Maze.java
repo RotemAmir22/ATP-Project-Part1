@@ -55,13 +55,10 @@ public class Maze {
         else
             return -1;
     }
-    public Position getStartPosition() {
-        return startPoint;
-    }
 
-    public Position getGoalPosition() {
-        return endPoint;
-    }
+    public Position getStartPosition() {return startPoint;}
+
+    public Position getGoalPosition() {return endPoint;}
 
     public void print(){
         for (int i = 0; i < rows; i++) {
