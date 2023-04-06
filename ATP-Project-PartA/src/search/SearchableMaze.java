@@ -40,6 +40,16 @@ public class SearchableMaze implements ISearchable{
      */
     public void addState(MazeState state){possibleStates.add(state);}
 
+    @Override
+    public AState getStart() {
+        return null;
+    }
+
+    @Override
+    public AState getGoal() {
+        return null;
+    }
+
     /**
      * @return a list of states which create a legal solution
      */
