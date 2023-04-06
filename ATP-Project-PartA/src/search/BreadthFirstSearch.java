@@ -1,4 +1,4 @@
-package algorithms.mazeGenerators.search;
+package search;
 
 import java.awt.*;
 import java.util.LinkedList;

@@ -1,10 +1,9 @@
-package algorithms.mazeGenerators.search;
+package search;
 
 import algorithms.mazeGenerators.Position;
 
 import java.awt.*;
 import java.util.LinkedList;
-import java.util.List;
 
 public abstract class AState {
 
