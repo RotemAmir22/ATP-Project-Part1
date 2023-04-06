@@ -1,4 +1,4 @@
-package search;
+package algorithms.mazeGenerators.search;
 
 import algorithms.mazeGenerators.Maze;
 

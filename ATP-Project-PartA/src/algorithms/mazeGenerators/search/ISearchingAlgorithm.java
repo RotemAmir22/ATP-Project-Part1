@@ -1,4 +1,4 @@
-package search;
+package algorithms.mazeGenerators.search;
 
 public interface ISearchingAlgorithm {
 
