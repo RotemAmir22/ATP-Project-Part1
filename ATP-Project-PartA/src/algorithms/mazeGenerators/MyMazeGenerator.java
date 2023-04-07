@@ -46,7 +46,13 @@ public class MyMazeGenerator extends AMazeGenerator {
         // build maze and initialize with only walls
         Maze maze = new Maze(rows, colums);
         Maze.setAllMazeToWalls(maze);
-        maze.setCellInMaze(rows,colums,0);
+
+        //set start point
+        maze.setCellInMaze(0,0,0);
+
+        //set end point
+        maze.setCellInMaze(maze.getRows() -1, maze.getColoums()-1,0);
+
         ArrayList<Position> neighbors = new ArrayList<>();
         neighbors.add(maze.getStartPosition());
 
@@ -56,6 +62,10 @@ public class MyMazeGenerator extends AMazeGenerator {
             Position currentP = neighbors.remove(random.nextInt(neighbors.size()));
             setNeighbors(maze, neighbors, currentP);
         }
+
+        //create at least one path
+        createPath(maze);
+
         return maze;
     }
 }
