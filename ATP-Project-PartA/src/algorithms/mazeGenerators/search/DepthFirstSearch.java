@@ -18,15 +18,20 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
     private void DFS(ISearchable searchProblem)
     {
         searchProblem.resetPossibleStates();
-        for(AState u: searchProblem.getAllPossibleStates()){
+        for (int i = 0; i < searchProblem.getAllPossibleStates().size(); i++) {
+            AState u = searchProblem.getAllPossibleStates().get(i);
             u.setColor(Color.white);
             u.setParent(null);
         }
         time = 0;
-        for(AState u: searchProblem.getAllPossibleStates()){
+        for (int i = 0; i < searchProblem.getAllPossibleStates().size(); i++) {
+            AState u = searchProblem.getAllPossibleStates().get(i);
             if(u.getColor() == Color.white)
                 DFSVisit(searchProblem, u);
+            if (u.node.getRowIndex() == searchProblem.getGoal().node.getRowIndex() && u.node.getColumnIndex() == searchProblem.getGoal().node.getColumnIndex())
+                searchProblem.setGoal(u);
         }
+
 
     }
 
@@ -40,7 +45,8 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
         v.setDist(time);
         v.setColor(Color.gray);
         searchProblem.setPossibleStates(v.getNeighbors());
-        for(AState u: searchProblem.getAllPossibleStates()){
+        for (int i = 0; i < searchProblem.getAllPossibleStates().size(); i++) {
+            AState u = searchProblem.getAllPossibleStates().get(i);
             if(u.getColor() == Color.white)
             {
                 u.setParent(v);
@@ -69,6 +75,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
         AState currentState = domain.getGoal();
         while(currentState.getParent() != null){ // run until start (parent is null)
             solution.addToPath(currentState.getParent());
+            currentState.setCost();
             numOfNode++;
             currentState = currentState.getParent();
         }

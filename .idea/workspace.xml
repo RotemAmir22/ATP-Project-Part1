@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fb754360-06a8-4a49-93a9-113010de6dec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/AState.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/AState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/BreadthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/MazeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunSearchOnMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunSearchOnMaze.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,5 +231,12 @@
     <MESSAGE value="SearchableMaze&#10;BreadthFirstSearch&#10;DepthFirstSearch&#10;ISearchable" />
     <MESSAGE value="BFS" />
     <option name="LAST_COMMIT_MESSAGE" value="BFS" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((algorithms.mazeGenerators.search.MazeState[][])((SearchableMaze)searchProblem).s_maze)[0][1]" custom="algorithms.mazeGenerators.search.MazeState[][],algorithms.mazeGenerators.search.SearchableMaze" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
