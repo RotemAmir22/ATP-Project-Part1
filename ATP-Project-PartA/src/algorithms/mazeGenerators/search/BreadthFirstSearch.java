@@ -8,6 +8,13 @@ import java.util.Queue;
 public class BreadthFirstSearch extends ASearchingAlgorithm {
 
     protected Queue<AState> Q;
+
+    /**
+     * Constructor
+     */
+    public BreadthFirstSearch(){
+        Q = new LinkedList<>();
+    }
     /**
      * BFS algorithm
      * @param searchProblem that we want to solve

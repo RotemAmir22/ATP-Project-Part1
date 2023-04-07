@@ -7,6 +7,9 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
 
     private int time;
 
+    public DepthFirstSearch(){
+
+    }
     /**
      * DFS algorithm
      * Two functions used to set the distance and parents of states
