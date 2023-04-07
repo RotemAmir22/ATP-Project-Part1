@@ -53,4 +53,14 @@ public class BestFirstSearch extends BreadthFirstSearch {
       }
       return solution;
    }
+import java.util.PriorityQueue;
+
+public class BestFirstSearch extends BreadthFirstSearch{
+
+    /**
+     * Constructor
+     */
+    public BestFirstSearch(){
+        Q = new PriorityQueue<>();
+    }
 }

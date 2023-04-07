@@ -57,12 +57,12 @@ public class SearchableMaze implements ISearchable{
 
     @Override
     public AState getStart() {
-        return null;
+        return this.start;
     }
 
     @Override
     public AState getGoal() {
-        return null;
+        return this.goal;
     }
 
     /**

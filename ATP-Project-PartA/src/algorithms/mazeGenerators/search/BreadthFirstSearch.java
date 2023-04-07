@@ -2,10 +2,19 @@ package algorithms.mazeGenerators.search;
 
 import java.awt.*;
 import java.util.LinkedList;
+import java.util.Queue;
 
+/* BFS */
 public class BreadthFirstSearch extends ASearchingAlgorithm {
 
+    protected Queue<AState> Q;
 
+    /**
+     * Constructor
+     */
+    public BreadthFirstSearch(){
+        Q = new LinkedList<>();
+    }
     /**
      * BFS algorithm
      * @param searchProblem that we want to solve
