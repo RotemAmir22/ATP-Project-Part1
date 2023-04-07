@@ -34,6 +34,12 @@ public class MyMazeGenerator extends AMazeGenerator {
     }
 
 
+    /**
+     * generates a maze using prim randomized algorithm
+     * @param rows : number of rows in maze
+     * @param colums : number of colums in maze
+     * @return : return built maze
+     */
     @Override
     public Maze generate(int rows, int colums) {
 
