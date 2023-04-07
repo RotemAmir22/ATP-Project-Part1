@@ -24,18 +24,19 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
     {
         /* initialized the search problem's states */
         searchProblem.resetPossibleStates();
-        for (AState v: searchProblem.getAllPossibleStates()){
+        for (int i =0; i<searchProblem.getAllPossibleStates().size(); i++)
+        {
+            AState v = searchProblem.getAllPossibleStates().get(i);
             v.setDist(Double.POSITIVE_INFINITY);
             v.setParent(null);
             v.setColor(Color.white);
-
         }
         AState v;
         Q = new LinkedList<>();
-        start.dist = 0;
-        start.parent = null;
-        start.color = Color.gray;
-        Q.add(start);
+        searchProblem.getAllPossibleStates().get(0).dist = 0;
+        searchProblem.getAllPossibleStates().get(0).parent = null;
+        searchProblem.getAllPossibleStates().get(0).color = Color.gray;
+        Q.add(searchProblem.getAllPossibleStates().get(0));
         while(!Q.isEmpty()) // use in Q to determine the other vertexes
         {
             v = Q.remove();
