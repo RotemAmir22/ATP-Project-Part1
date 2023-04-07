@@ -33,10 +33,16 @@ public class SearchableMaze implements ISearchable{
     }
 
     /**
-     * Add a possible state to list
-     * @param state to optional solution
+     * Set the possible states' list
+     * @param states to optional solutions
      */
-    public void addState(MazeState state){possibleStates.add(state);}
+    public void setPossibleStates(List<AState> states){
+
+        for(AState s: states){
+            if(s.getValue() == 0)
+                possibleStates.add(s);
+        }
+    }
 
     @Override
     public AState getStart() {
