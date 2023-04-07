@@ -17,14 +17,12 @@ public class SearchableMaze implements ISearchable{
     /**
      * Create a searchable maze with an existing maze, start and goal points
      * @param m the original maze
-     * @param s start point to find a path
-     * @param g goal point
      */
-    public SearchableMaze(Maze m, MazeState s, MazeState g)
+    public SearchableMaze(Maze m)
     {
         this.maze = m;
-        this.start = s;
-        this.goal = g;
+        this.start = new MazeState(m.getStartPosition(), 0);
+        this.goal = new MazeState(m.getGoalPosition(), 0);
         this.possibleStates = new ArrayList<>();
         this.s_maze = new MazeState[m.getRows()][m.getColoums()];
         for (int i = 0; i < m.getRows(); i ++){

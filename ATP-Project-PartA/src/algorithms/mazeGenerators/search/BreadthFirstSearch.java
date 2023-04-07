@@ -63,9 +63,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         BFS(domain, start);
         solution.addToPath(domain.getGoal()); // start from the end to promise a legal path
         AState currentState = domain.getGoal();
-        while(currentState != null){ // run until start (parent is null)
-            AState minStateDist = findMinDist(currentState.getNeighbors());
-            solution.addToPath(minStateDist);
+        while(currentState.getParent() != null){ // run until start (parent is null)
+            solution.addToPath(currentState.getParent());
             currentState = currentState.getParent();
         }
         return solution;
