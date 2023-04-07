@@ -3,7 +3,7 @@ package algorithms.mazeGenerators.search;
 import java.awt.*;
 import java.util.LinkedList;
 
-public class BreadthFirstSearch extends ASearchingAlgorithm implements ISearchingAlgorithm {
+public class BreadthFirstSearch extends ASearchingAlgorithm {
 
 
     /**
