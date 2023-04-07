@@ -11,7 +11,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      * @param searchProblem that we want to solve
      * @param start point
      */
-    public void BFS(ISearchable searchProblem, AState start)
+    private void BFS(ISearchable searchProblem, AState start)
     {
         /* initialized the search problem's states */
         for (AState v: searchProblem.getAllPossibleStates()){
@@ -63,9 +63,9 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         BFS(domain, start);
         solution.addToPath(domain.getGoal()); // start from the end to promise a legal path
         AState currentState = domain.getGoal();
-        while(currentState != null){ // run until start (parent is null)
-            AState minStateDist = findMinDist(currentState.getNeighbors());
-            solution.addToPath(minStateDist);
+        while(currentState.getParent() != null){ // run until start (parent is null)
+            solution.addToPath(currentState.getParent());
+            numOfNode++;
             currentState = currentState.getParent();
         }
         return solution;
@@ -76,13 +76,13 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      * @param tmpList of AState
      * @return the minimum AState's dist
      */
-    AState findMinDist(LinkedList<AState> tmpList){
-        AState result = tmpList.remove();
-        for(AState s: tmpList){
-            if(result.getDist() > s.getDist())
-                result = s;
-        }
-        return result;
-
-    }
+//    private AState findMinDist(LinkedList<AState> tmpList){
+//        AState result = tmpList.remove();
+//        for(AState s: tmpList){
+//            if(result.getDist() > s.getDist())
+//                result = s;
+//        }
+//        return result;
+//
+//    }
 }
