@@ -30,6 +30,7 @@ public class SearchableMaze implements ISearchable{
                 s_maze[i][j]=new MazeState(new Position(i,j),maze.getCellValue(i,j));
             }
         }
+
         for(int row = 0; row < m.getRows(); row ++)
         {
             for(int col = 0; col < m.getColoums(); col++)
@@ -40,13 +41,63 @@ public class SearchableMaze implements ISearchable{
                     for(int j = -1; j <=1; j++)
                     {
                         if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColoums())
-                            s_maze[row][col].addToNeighbors(s_maze[row + i][col + j]);
+                            if(!(i ==0 && j==0))
+                                if(s_maze[row + i][col + j].value == 0)
+                                    s_maze[row][col].addToNeighbors(s_maze[row + i][col + j]);
                     }
                 }
             }
         }
+
+        checkNeighbours();
         setStart(s_maze[0][0]);
         setGoal(s_maze[maze.getRows()-1][maze.getColoums()-1]);
+    }
+
+    /**
+     * check if the diagonals are valid
+     * if not then removes from neighbours
+     */
+    public void checkNeighbours()
+    {
+        for(int row = 0; row < this.maze.getRows(); row ++)
+        {
+            for(int col = 0; col < this.maze.getColoums(); col++)
+            {
+                //check the neighbors list only diagonals
+                for (int i = -1; i <= 1; i++)
+                {
+                    for(int j = -1; j <=1; j++)
+                    {
+                        if(0 <= (row + i) && (row + i) < this.maze.getRows() && 0 <= (col + j) && (col + j) < this.maze.getColoums())
+                            if(row != row+i && col != col +j)
+                            {
+                                if(!checkCommonNeighbour(this.s_maze[row][col],this.s_maze[row+i][col+j]))
+                                    s_maze[row][col].removeFromNeighbors(s_maze[row + i][col + j]);
+                            }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * helper function that checks if there is a path between two cells that is not only diagonal
+     * @param first : first cell
+     * @param second : second cell
+     * @return : true if there is a third cell that connects them, in other words, another valid path
+     */
+    public boolean checkCommonNeighbour(MazeState first, MazeState second)
+    {
+        for (int i =0; i<first.neighbors.size();i++)
+        {
+            for (int j=0; j<second.neighbors.size(); j++)
+            {
+                if(first.neighbors.get(i)==second.neighbors.get(j))
+                    return true;
+            }
+        }
+        return false;
     }
 
     public void resetPossibleStates()

@@ -33,6 +33,11 @@ public abstract class AState {
     {
         neighbors.add(state);
     }
+
+    public void removeFromNeighbors(AState state)
+    {
+        neighbors.remove(state);
+    }
     public void setDist(double d)
     {
         this.dist = d;

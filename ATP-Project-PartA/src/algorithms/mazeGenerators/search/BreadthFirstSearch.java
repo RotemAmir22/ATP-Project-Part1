@@ -54,9 +54,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                 searchProblem.setGoal(v);
             v.setColor(Color.black);
         }
-
-
-
     }
 
     @Override
