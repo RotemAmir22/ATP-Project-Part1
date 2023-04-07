@@ -15,5 +15,5 @@ public class Solution {
     {
         return solutionPath;
     }
-    public void addToPath(AState state){solutionPath.add(state);}
+    public void addToPath(AState state){solutionPath.add(0,state);}
 }

@@ -46,5 +46,10 @@ public abstract class AState {
         this.parent = p;
     }
 
-
+    @Override
+    public String toString() {
+        return "AState{" +
+                "node=" + node +
+                '}';
+    }
 }

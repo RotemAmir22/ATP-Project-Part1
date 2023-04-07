@@ -45,7 +45,8 @@ public class SearchableMaze implements ISearchable{
                 }
             }
         }
-
+        setStart(s_maze[0][0]);
+        setGoal(s_maze[maze.getRows()-1][maze.getColoums()-1]);
     }
 
     public void resetPossibleStates()

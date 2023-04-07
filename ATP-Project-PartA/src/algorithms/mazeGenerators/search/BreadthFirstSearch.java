@@ -33,6 +33,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         }
         AState v;
         Q = new LinkedList<>();
+        //searchProblem.setStart(searchProblem.getAllPossibleStates().get(0));
         start.setDist(0);
         start.setParent(null);
         start.setColor(Color.gray);
@@ -49,10 +50,13 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                     Q.add(u);
                 }
             }
+            if(v.node.getRowIndex()==searchProblem.getGoal().node.getRowIndex() && v.node.getColumnIndex() == searchProblem.getGoal().node.getColumnIndex())
+                searchProblem.setGoal(v);
             v.setColor(Color.black);
         }
 
-        searchProblem.setStart(start);
+
+
     }
 
     @Override
@@ -82,6 +86,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             numOfNode++;
             currentState = currentState.getParent();
         }
+
         return solution;
     }
 
