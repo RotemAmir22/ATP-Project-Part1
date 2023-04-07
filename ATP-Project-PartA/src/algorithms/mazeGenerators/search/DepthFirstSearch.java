@@ -1,6 +1,6 @@
 package algorithms.mazeGenerators.search;
 
-public class DepthFirstSearch extends ASearchingAlgorithm implements ISearchingAlgorithm{
+public class DepthFirstSearch extends ASearchingAlgorithm{
     @Override
     public String getName() {
         return null;
