@@ -2,16 +2,18 @@ package algorithms.mazeGenerators.search;
 
 import java.awt.*;
 import java.util.LinkedList;
+import java.util.Queue;
 
+/* BFS */
 public class BreadthFirstSearch extends ASearchingAlgorithm {
 
-
+    protected Queue<AState> Q;
     /**
      * BFS algorithm
      * @param searchProblem that we want to solve
      * @param start point
      */
-    public void BFS(ISearchable searchProblem, AState start)
+    private void BFS(ISearchable searchProblem, AState start)
     {
         /* initialized the search problem's states */
         for (AState v: searchProblem.getAllPossibleStates()){
@@ -65,6 +67,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         AState currentState = domain.getGoal();
         while(currentState.getParent() != null){ // run until start (parent is null)
             solution.addToPath(currentState.getParent());
+            numOfNode++;
             currentState = currentState.getParent();
         }
         return solution;
@@ -75,13 +78,13 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      * @param tmpList of AState
      * @return the minimum AState's dist
      */
-    private AState findMinDist(LinkedList<AState> tmpList){
-        AState result = tmpList.remove();
-        for(AState s: tmpList){
-            if(result.getDist() > s.getDist())
-                result = s;
-        }
-        return result;
-
-    }
+//    private AState findMinDist(LinkedList<AState> tmpList){
+//        AState result = tmpList.remove();
+//        for(AState s: tmpList){
+//            if(result.getDist() > s.getDist())
+//                result = s;
+//        }
+//        return result;
+//
+//    }
 }
