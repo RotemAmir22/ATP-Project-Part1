@@ -21,6 +21,7 @@ public abstract class AState {
     protected LinkedList<AState> neighbors;
 
     public Position getState(){return this.node;}
+    public int getValue(){return this.value;}
     public AState getParent(){return this.parent;}
     public Color getColor(){return this.color;}
     public double getDist(){return this.dist;}
