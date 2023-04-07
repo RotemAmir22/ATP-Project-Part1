@@ -76,7 +76,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      * @param tmpList of AState
      * @return the minimum AState's dist
      */
-    private AState findMinDist(LinkedList<AState> tmpList){
+    AState findMinDist(LinkedList<AState> tmpList){
         AState result = tmpList.remove();
         for(AState s: tmpList){
             if(result.getDist() > s.getDist())
