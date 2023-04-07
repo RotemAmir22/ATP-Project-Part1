@@ -14,6 +14,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
      */
     private void DFS(ISearchable searchProblem)
     {
+        searchProblem.resetPossibleStates();
         for(AState u: searchProblem.getAllPossibleStates()){
             u.setColor(Color.white);
             u.setParent(null);
@@ -21,7 +22,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
         time = 0;
         for(AState u: searchProblem.getAllPossibleStates()){
             if(u.getColor() == Color.white)
-                DFSVisit(u);
+                DFSVisit(searchProblem, u);
         }
 
     }
@@ -30,16 +31,17 @@ public class DepthFirstSearch extends ASearchingAlgorithm{
      * Helper function of DFS
      * @param v to set dist, color and parent
      */
-    private void DFSVisit(AState v)
+    private void DFSVisit(ISearchable searchProblem, AState v)
     {
         time += 1;
         v.setDist(time);
         v.setColor(Color.gray);
-        for(AState u: v.getNeighbors()){
+        searchProblem.setPossibleStates(v.getNeighbors());
+        for(AState u: searchProblem.getAllPossibleStates()){
             if(u.getColor() == Color.white)
             {
                 u.setParent(v);
-                DFSVisit(u);
+                DFSVisit(searchProblem, u);
             }
         }
         v.setColor(Color.black);

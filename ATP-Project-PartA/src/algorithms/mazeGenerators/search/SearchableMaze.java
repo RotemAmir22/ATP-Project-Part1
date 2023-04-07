@@ -1,6 +1,7 @@
 package algorithms.mazeGenerators.search;
 
 import algorithms.mazeGenerators.Maze;
+import algorithms.mazeGenerators.Position;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,17 @@ public class SearchableMaze implements ISearchable{
         this.s_maze = new MazeState[m.getRows()][m.getColoums()];
         for (int i = 0; i < m.getRows(); i ++){
             for(int j = 0; j < m.getColoums(); j++){
-                s_maze[i][j].value = maze.getCellValue(i,j);
+                s_maze[i][j]=new MazeState(new Position(i,j),maze.getCellValue(i,j));
+            }
+        }
+    }
+
+    public void resetPossibleStates()
+    {
+        for (int i = 0; i < maze.getRows(); i ++){
+            for(int j = 0; j < maze.getColoums(); j++){
+                if(s_maze[i][j].value == 0)
+                    possibleStates.add(s_maze[i][j]);
             }
         }
     }

@@ -16,6 +16,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
     private void BFS(ISearchable searchProblem, AState start)
     {
         /* initialized the search problem's states */
+        searchProblem.resetPossibleStates();
         for (AState v: searchProblem.getAllPossibleStates()){
             v.setDist(Double.POSITIVE_INFINITY);
             v.setParent(null);
@@ -31,7 +32,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         while(!Q.isEmpty()) // use in Q to determine the other vertexes
         {
             v = Q.remove();
-            for(AState u: v.getNeighbors()){
+            searchProblem.setPossibleStates(v.getNeighbors());
+            for(AState u: searchProblem.getAllPossibleStates()){
                 if(u.getColor() == Color.white){
                     u.setColor(Color.gray);
                     u.setDist(v.getDist() + 1);
