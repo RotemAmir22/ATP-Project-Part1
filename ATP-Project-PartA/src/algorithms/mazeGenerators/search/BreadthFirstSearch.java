@@ -33,10 +33,10 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         }
         AState v;
         Q = new LinkedList<>();
-        searchProblem.getAllPossibleStates().get(0).dist = 0;
-        searchProblem.getAllPossibleStates().get(0).parent = null;
-        searchProblem.getAllPossibleStates().get(0).color = Color.gray;
-        Q.add(searchProblem.getAllPossibleStates().get(0));
+        start.setDist(0);
+        start.setParent(null);
+        start.setColor(Color.gray);
+        Q.add(start);
         while(!Q.isEmpty()) // use in Q to determine the other vertexes
         {
             v = Q.remove();
@@ -51,6 +51,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             }
             v.setColor(Color.black);
         }
+
+        searchProblem.setStart(start);
     }
 
     @Override

@@ -73,6 +73,16 @@ public class SearchableMaze implements ISearchable{
     }
 
     @Override
+    public void setStart(AState s) {
+        this.start = (MazeState) s;
+    }
+
+    @Override
+    public void setGoal(AState g) {
+        this.goal = (MazeState) g;
+    }
+
+    @Override
     public AState getStart() {
         return this.start;
     }
