@@ -12,13 +12,15 @@ public abstract class AState {
     protected Color color;
     protected double dist;
     protected int value;
+    protected LinkedList<AState> neighbors;
 
     public AState(Position node, int value)
     {
         this.node = node;
         this.value = value;
+        neighbors = new LinkedList<>();
     }
-    protected LinkedList<AState> neighbors;
+
 
     public Position getState(){return this.node;}
     public int getValue(){return this.value;}
@@ -27,7 +29,7 @@ public abstract class AState {
     public double getDist(){return this.dist;}
     public LinkedList<AState> getNeighbors(){return this.neighbors;}
 
-    public void addToNeighbors(MazeState state)
+    public void addToNeighbors(AState state)
     {
         neighbors.add(state);
     }
