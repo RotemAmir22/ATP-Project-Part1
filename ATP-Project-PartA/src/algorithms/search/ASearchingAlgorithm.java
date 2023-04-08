@@ -1,6 +1,4 @@
-package algorithms.mazeGenerators.search;
-
-import java.util.Queue;
+package algorithms.search;
 
 public abstract class ASearchingAlgorithm implements ISearchingAlgorithm{
 
