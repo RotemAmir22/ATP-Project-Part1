@@ -20,7 +20,7 @@ class BestFirstSearchTest {
     private Maze emptyMaze3 = EmptyMaze.generate(-5, -5);
 
     private SearchableMaze s_mEmpty1 = new SearchableMaze(emptyMaze1);//checked
-    private SearchableMaze s_mEmpty2 = new SearchableMaze(emptyMaze2);
+    private SearchableMaze s_mEmpty2 = new SearchableMaze(emptyMaze2);//checked
     private SearchableMaze s_mEmpty3 = new SearchableMaze(emptyMaze3);//checked
 
     //simple mazes
@@ -28,8 +28,8 @@ class BestFirstSearchTest {
     private Maze simpleMaze2 = SimpleMaze.generate(1000, 1000);
     private Maze simpleMaze3 = SimpleMaze.generate(-5, -5);
 
-    private SearchableMaze s_mSimple1 = new SearchableMaze(simpleMaze1);
-    private SearchableMaze s_mSimple2 = new SearchableMaze(simpleMaze2);
+    private SearchableMaze s_mSimple1 = new SearchableMaze(simpleMaze1);//checked
+    private SearchableMaze s_mSimple2 = new SearchableMaze(simpleMaze2);//checked
     private SearchableMaze s_mSimple3 = new SearchableMaze(simpleMaze3);//checked
 
     //my mazes
@@ -49,19 +49,35 @@ class BestFirstSearchTest {
     @org.junit.jupiter.api.Test
     void solve()
     {
-        Solution solution1;
-        Solution solution2;
+        Solution solution;
 
         //input null or bad maze
-        assert (bestFirstSearch.solve(null) == null);
-        assert (bestFirstSearch.solve(s_mEmpty1)==null);//0X0
-        assert (bestFirstSearch.solve(s_mEmpty3)==null);//-5X-5
-        assert (bestFirstSearch.solve(s_mSimple3)==null);//-5X-5
-        assert (bestFirstSearch.solve(s_mMyMaze3)==null);//-5X-5
-
-
+        solution=bestFirstSearch.solve(null);
+        assert (solution == null);
+        solution=bestFirstSearch.solve(s_mEmpty1);
+        assert (solution == null);//0X0
+        solution=bestFirstSearch.solve(s_mEmpty3);
+        assert (solution==null);//-5X-5
+        solution=bestFirstSearch.solve(s_mSimple3);
+        assert (solution==null);//-5X-5
+        solution=bestFirstSearch.solve(s_mMyMaze3);
+        assert (solution==null);//-5X-5
 
         // check empty mazes
+        solution = bestFirstSearch.solve(s_mEmpty2);
+        assert (checkSolution(solution, emptyMaze2));//1000X1000
+
+        //simple maze
+        solution = bestFirstSearch.solve(s_mSimple1);
+        assert (checkSolution(solution, simpleMaze1));//20X30
+        solution = bestFirstSearch.solve(s_mSimple2);
+        assert (checkSolution(solution, simpleMaze2));//1000X1000
+
+        //my maze
+        solution = bestFirstSearch.solve(s_mMyMaze1);
+        assert (checkSolution(solution, MyMaze1));//10X25
+        solution = bestFirstSearch.solve(s_mMyMaze2);
+        assert (checkSolution(solution, MyMaze2));//1000X1000
 
     }
 
@@ -92,15 +108,15 @@ class BestFirstSearchTest {
         {
             AState currentPos = solutionPath.get(i);
             //start point
-            if(i==0 && currentPos.node != maze.getStartPosition())
+            if(i==0 && currentPos.node.getRowIndex() != maze.getStartPosition().getRowIndex() && currentPos.node.getColumnIndex() != maze.getStartPosition().getColumnIndex())
                 return false;
 
             //end point
-            if(i==solutionPath.size()-1 && currentPos.node != maze.getGoalPosition())
+            if(i==solutionPath.size()-1 &&  currentPos.node.getRowIndex() != maze.getGoalPosition().getRowIndex() && currentPos.node.getColumnIndex() != maze.getGoalPosition().getColumnIndex())
                 return false;
 
             //other cells in path
-            if(currentPos.value == 1)
+            if(currentPos.value == 1 && currentPos.value != maze.getCellValue(currentPos.node.getRowIndex(),currentPos.node.getColumnIndex()))
                 return false;
         }
         return true;
