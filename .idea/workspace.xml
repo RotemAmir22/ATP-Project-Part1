@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb754360-06a8-4a49-93a9-113010de6dec" name="Changes" comment="Best">
+    <list default="true" id="fb754360-06a8-4a49-93a9-113010de6dec" name="Changes" comment="30X30 tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/search/BestFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/search/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/search/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/search/BestFirstSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/search/BestFirstSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunMazeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunMazeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunSearchOnMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ATP-Project-PartA/RunSearchOnMaze.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680944178191</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="30X30 tests">
+      <created>1680944566133</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680944566133</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +260,8 @@
     <MESSAGE value="BFS" />
     <MESSAGE value="DFS - Changes" />
     <MESSAGE value="Best" />
-    <option name="LAST_COMMIT_MESSAGE" value="Best" />
+    <MESSAGE value="30X30 tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="30X30 tests" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

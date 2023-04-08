@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 public class BestFirstSearch extends BreadthFirstSearch {
 
     public BestFirstSearch(){
-        Q = new PriorityQueue<>(Comparator.comparingInt(AState::getCost));
+        Q = new PriorityQueue<>(Comparator.comparingInt(AState::getCost).reversed());
     }
     @Override
     public String getName() {
@@ -36,7 +36,7 @@ public class BestFirstSearch extends BreadthFirstSearch {
         Q.add(start);
         while (!Q.isEmpty()) // use in Q to determine the other vertexes
         {
-            v = Q.poll(); // from priority queue
+            v = Q.remove(); // from priority queue
             searchProblem.setPossibleStates(v.getNeighbors());
             for (AState u : searchProblem.getAllPossibleStates()) {
                 if (u.getColor() == Color.white) {
