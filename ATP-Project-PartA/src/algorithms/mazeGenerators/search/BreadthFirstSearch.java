@@ -32,7 +32,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             v.setColor(Color.white);
         }
         AState v;
-        Q = new LinkedList<>();
         //searchProblem.setStart(searchProblem.getAllPossibleStates().get(0));
         start.setDist(0);
         start.setParent(null);
@@ -81,7 +80,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         AState currentState = domain.getGoal();
         while (currentState.getParent() != null) { // run until start (parent is null)
             solution.addToPath(currentState.getParent());
-            currentState.setCost();
+            //currentState.setCost();
             numOfNode++;
             currentState = currentState.getParent();
         }

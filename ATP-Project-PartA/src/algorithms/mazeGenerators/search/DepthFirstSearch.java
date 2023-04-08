@@ -72,7 +72,6 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
         AState currentState = domain.getGoal();
         while (currentState.getParent() != null) { // run until start (parent is null)
             solution.addToPath(currentState.getParent());
-            currentState.setCost();
             numOfNode++;
             currentState = currentState.getParent();
         }
