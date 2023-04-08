@@ -59,6 +59,9 @@ public class BestFirstSearch extends BreadthFirstSearch {
      * @return a new solution
      */
     public Solution solve(ISearchable domain) {
+        //if null
+        if(domain == null || domain.getStart() == null)
+            return null;
         Solution sol = new Solution();
         AState start = domain.getStart();
         BestFS(domain, start);

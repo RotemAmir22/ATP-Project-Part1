@@ -26,7 +26,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             u.setColor(Color.white);
             u.setParent(null);
         }
-        Stack<AState> stack = new Stack<AState>();
+        Stack<AState> stack = new Stack<>();
         stack.push(start);
         while (!stack.isEmpty()) {
             time++;
@@ -42,7 +42,6 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
                         stack.push(v);
                         v.setParent(current);
                     }
-
                 }
             }
             current.setColor(Color.black);

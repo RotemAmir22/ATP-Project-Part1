@@ -21,6 +21,9 @@ public class SearchableMaze implements ISearchable{
      */
     public SearchableMaze(Maze m)
     {
+        if(m == null)
+            return;
+
         this.maze = m;
         this.start = new MazeState(m.getStartPosition(), 0);
         this.goal = new MazeState(m.getGoalPosition(), 0);
@@ -30,14 +33,12 @@ public class SearchableMaze implements ISearchable{
                 s_maze[i][j]=new MazeState(new Position(i,j),maze.getCellValue(i,j));
             }
         }
-
         for(int row = 0; row < m.getRows(); row ++)
         {
             for(int col = 0; col < m.getColoums(); col++)
             {
                 // set the neighbors list
                 for (int i = -1; i <= 1; i++)
-                {
                     for(int j = -1; j <=1; j++)
                     {
                         if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColoums())
@@ -45,10 +46,8 @@ public class SearchableMaze implements ISearchable{
                                 if(s_maze[row + i][col + j].value == 0)
                                     s_maze[row][col].addToNeighbors(s_maze[row + i][col + j]);
                     }
-                }
             }
         }
-
         checkNeighbours();
         setStart(s_maze[0][0]);
         setGoal(s_maze[maze.getRows()-1][maze.getColoums()-1]);

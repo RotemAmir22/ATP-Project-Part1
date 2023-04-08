@@ -43,6 +43,9 @@ public class MyMazeGenerator extends AMazeGenerator {
     @Override
     public Maze generate(int rows, int colums) {
 
+        if(rows <= 0 || colums <= 0)
+            return null;
+
         // build maze and initialize with only walls
         Maze maze = new Maze(rows, colums);
         Maze.setAllMazeToWalls(maze);

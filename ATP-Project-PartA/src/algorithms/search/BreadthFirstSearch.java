@@ -32,6 +32,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             v.setColor(Color.white);
         }
         AState v;
+
         //searchProblem.setStart(searchProblem.getAllPossibleStates().get(0));
         start.setDist(0);
         start.setParent(null);

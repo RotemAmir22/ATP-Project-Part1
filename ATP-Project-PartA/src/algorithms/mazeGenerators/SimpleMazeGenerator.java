@@ -8,10 +8,13 @@ public class SimpleMazeGenerator extends AMazeGenerator{
      * crates a simple maze that has at least one route from start to end
      * @param rows: number of rows in maze
      * @param colums: number of columns in maze
-     * @return: maze built
+     * @return : maze built
      */
     @Override
     public Maze generate(int rows, int colums) {
+
+        if(rows <= 0 || colums <= 0)
+            return null;
 
         Maze maze = new Maze(rows, colums);
         Maze.setAllMazeToWalls(maze);
