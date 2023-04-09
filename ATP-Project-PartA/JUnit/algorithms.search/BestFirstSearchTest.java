@@ -46,46 +46,11 @@ class BestFirstSearchTest {
        assert (Objects.equals(bestFirstSearch.getName(), "Best First Search"));
     }
 
-    @org.junit.jupiter.api.Test
-    void solve()
-    {
-        Solution solution;
-
-        //input null or bad maze
-        solution=bestFirstSearch.solve(null);
-        assert (solution == null);
-        solution=bestFirstSearch.solve(s_mEmpty1);
-        assert (solution == null);//0X0
-        solution=bestFirstSearch.solve(s_mEmpty3);
-        assert (solution==null);//-5X-5
-        solution=bestFirstSearch.solve(s_mSimple3);
-        assert (solution==null);//-5X-5
-        solution=bestFirstSearch.solve(s_mMyMaze3);
-        assert (solution==null);//-5X-5
-
-        // check empty mazes
-        solution = bestFirstSearch.solve(s_mEmpty2);
-        assert (checkSolution(solution, emptyMaze2));//1000X1000
-
-        //simple maze
-        solution = bestFirstSearch.solve(s_mSimple1);
-        assert (checkSolution(solution, simpleMaze1));//20X30
-        solution = bestFirstSearch.solve(s_mSimple2);
-        assert (checkSolution(solution, simpleMaze2));//1000X1000
-
-        //my maze
-        solution = bestFirstSearch.solve(s_mMyMaze1);
-        assert (checkSolution(solution, MyMaze1));//10X25
-        solution = bestFirstSearch.solve(s_mMyMaze2);
-        assert (checkSolution(solution, MyMaze2));//1000X1000
-
-    }
-
     /* TODO:
-      * need to check that all the cells in the path are not 1
-      * check that the start and end positions are the same
-      * check that the start and end positions are not null
-      * cannot check cost because the maze is random
+     *  need to check that all the cells in the path are not 1
+     *  check that the start and end positions are the same
+     *  check that the start and end positions are not null
+     *  cannot check cost because the maze is random
      */
     private boolean checkSolution(Solution solution, Maze maze)
     {
@@ -121,4 +86,41 @@ class BestFirstSearchTest {
         }
         return true;
     }
+
+    @org.junit.jupiter.api.Test
+    void solve()
+    {
+        Solution solution;
+
+        //input null or bad maze
+        solution=bestFirstSearch.solve(null);
+        assert (solution == null);
+        solution=bestFirstSearch.solve(s_mEmpty1);
+        assert (solution == null);//0X0
+        solution=bestFirstSearch.solve(s_mEmpty3);
+        assert (solution==null);//-5X-5
+        solution=bestFirstSearch.solve(s_mSimple3);
+        assert (solution==null);//-5X-5
+        solution=bestFirstSearch.solve(s_mMyMaze3);
+        assert (solution==null);//-5X-5
+
+        // check empty mazes
+        solution = bestFirstSearch.solve(s_mEmpty2);
+        assert (checkSolution(solution, emptyMaze2));//1000X1000
+
+        //simple maze
+        solution = bestFirstSearch.solve(s_mSimple1);
+        assert (checkSolution(solution, simpleMaze1));//20X30
+        solution = bestFirstSearch.solve(s_mSimple2);
+        assert (checkSolution(solution, simpleMaze2));//1000X1000
+
+        //my maze
+        solution = bestFirstSearch.solve(s_mMyMaze1);
+        assert (checkSolution(solution, MyMaze1));//10X25
+        solution = bestFirstSearch.solve(s_mMyMaze2);
+        assert (checkSolution(solution, MyMaze2));//1000X1000
+
+    }
+
+
 }
