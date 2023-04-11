@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/Main.java" afterDir="false" />
+    <list default="true" id="00aa059f-4f09-42e8-8a3b-718fbd6a6c15" name="Changes" comment="BestFirstSearchTest complete">
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/AMaze3DGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/IMazeGenerator3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3DState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/GeneralCheckingFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -24,15 +33,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2O8geLzfE1UWaTZlyvsXIUnagN7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ADSS_Group_H" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -153,7 +165,24 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="22dd041e-8be4-4021-8a56-0a08332e7f4c">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="workspace.xml fixed" />
     <MESSAGE value="input null or maze size is 0 or less returns null" />
     <MESSAGE value="unitest helper function" />
