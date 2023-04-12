@@ -7,7 +7,6 @@ import java.util.LinkedList;
 
 public abstract class AState {
 
-    protected Position node;
     protected AState parent;
     protected Color color;
     protected double dist;
@@ -15,15 +14,12 @@ public abstract class AState {
     protected int cost;
     protected LinkedList<AState> neighbors;
 
-    public AState(Position node, int value)
+    public AState(int value)
     {
-        this.node = node;
         this.value = value;
         neighbors = new LinkedList<>();
     }
 
-
-    public Position getState(){return this.node;}
     public int getValue(){return this.value;}
     public AState getParent(){return this.parent;}
     public Color getColor(){return this.color;}
@@ -52,21 +48,10 @@ public abstract class AState {
     {
         this.parent = p;
     }
-    public void setCost()
+    public void setCost(int cost)
     {
-        // check if its diagonal
-        if(this.parent != null && Math.abs(this.parent.getState().getRowIndex() - this.getState().getRowIndex()) == 1 && Math.abs(this.parent.getState().getColumnIndex() - this.getState().getColumnIndex()) == 1)
-            this.cost = 15;
-        else
-            this.cost = 10;
-
-
+        this.cost = cost;
     }
     public int getCost(){return this.cost;}
-    @Override
-    public String toString() {
-        return "AState{" +
-                "node=" + node +
-                '}';
-    }
+
 }

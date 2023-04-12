@@ -2,6 +2,7 @@ package algorithms.search;
 
 import java.awt.*;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /* BFS */
@@ -24,9 +25,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      */
     private void BFS(ISearchable searchProblem, AState start) {
         /* initialized the search problem's states */
-        searchProblem.resetPossibleStates();
-        for (int i = 0; i < searchProblem.getAllPossibleStates().size(); i++) {
-            AState v = searchProblem.getAllPossibleStates().get(i);
+        List<AState> possibleStates = searchProblem.resetPossibleStates();
+        for (AState v : possibleStates) {
             v.setDist(Double.POSITIVE_INFINITY);
             v.setParent(null);
             v.setColor(Color.white);
@@ -41,8 +41,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         while (!Q.isEmpty()) // use in Q to determine the other vertexes
         {
             v = Q.remove();
-            searchProblem.setPossibleStates(v.getNeighbors());
-            for (AState u : searchProblem.getAllPossibleStates()) {
+            possibleStates = searchProblem.getAllPossibleStates(v.getNeighbors());
+            for (AState u : possibleStates) {
                 if (u.getColor() == Color.white) {
                     u.setColor(Color.gray);
                     u.setDist(v.getDist() + 1);
@@ -50,8 +50,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
                     Q.add(u);
                 }
             }
-            if (v.node.getRowIndex() == searchProblem.getGoal().node.getRowIndex() && v.node.getColumnIndex() == searchProblem.getGoal().node.getColumnIndex())
-                searchProblem.setGoal(v);
             v.setColor(Color.black);
         }
     }

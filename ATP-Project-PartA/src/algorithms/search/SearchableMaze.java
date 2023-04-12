@@ -4,6 +4,7 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SearchableMaze implements ISearchable{
@@ -99,7 +100,7 @@ public class SearchableMaze implements ISearchable{
         return false;
     }
 
-    public void resetPossibleStates()
+    public List<AState> resetPossibleStates()
     {
         this.possibleStates = new ArrayList<>();
         for (int i = 0; i < maze.getRows(); i ++){
@@ -108,18 +109,22 @@ public class SearchableMaze implements ISearchable{
                     possibleStates.add(s_maze[i][j]);
             }
         }
+        return this.possibleStates;
     }
 
     /**
      * Set the possible states' list
-     * @param states to optional solutions
+     * @param state to optional solutions
      */
-    public void setPossibleStates(List<AState> states)
+    public void setPossibleStates(MazeState state)
     {
-        this.possibleStates = new ArrayList<>();
-        for(AState s: states){
-            if(s.getValue() == 0)
-                possibleStates.add(s);
+        if(state.getValue() == 0){
+            MazeState parent = (MazeState)(state.getParent());
+            if(parent != null && Math.abs(state.getPosition().getRowIndex() - parent.getPosition().getRowIndex()) == 1 && Math.abs(state.getPosition().getColumnIndex() - parent.getPosition().getColumnIndex()) == 1)
+                state.setCost(15);
+            else
+                state.setCost(10);
+            possibleStates.add(state);
         }
     }
 
@@ -147,7 +152,12 @@ public class SearchableMaze implements ISearchable{
      * @return a list of states which create a legal solution
      */
     @Override
-    public List<AState> getAllPossibleStates() {
-        return possibleStates;
+    public List<AState> getAllPossibleStates(List<AState> states)
+    {
+        this.possibleStates = new ArrayList<>();
+        for(AState s: states){
+            setPossibleStates((MazeState)s);
+        }
+        return this.possibleStates;
     }
 }

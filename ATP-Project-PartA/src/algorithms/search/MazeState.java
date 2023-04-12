@@ -8,10 +8,24 @@ import algorithms.mazeGenerators.Position;
  */
 public class MazeState extends AState{
 
+    private Position position;
 
-    public MazeState(Position node, int value)
+    public MazeState(Position position, int value)
     {
-        super(node, value);
+        super(value);
+        this.position = position;
+
+    }
+
+    public Position getPosition()
+    {
+        return this.position;
+    }
+
+    public String toString() {
+        return "AState{" +
+                "node=" + this.position +
+                '}';
     }
 
 

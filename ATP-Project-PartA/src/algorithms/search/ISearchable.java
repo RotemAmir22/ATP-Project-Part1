@@ -8,10 +8,7 @@ public interface ISearchable {
      void setGoal(AState g);
      AState getStart();
      AState getGoal();
+     List<AState> getAllPossibleStates(List<AState> list);
 
-     void setPossibleStates(List<AState> states);
-
-     List<AState> getAllPossibleStates();
-
-     void resetPossibleStates();
+     List<AState> resetPossibleStates();
 }

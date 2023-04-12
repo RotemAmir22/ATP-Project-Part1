@@ -20,9 +20,8 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
      * @param start pose
      */
     public void DFS(ISearchable searchProblem, AState start) {
-        searchProblem.resetPossibleStates();
-        for (int i = 0; i < searchProblem.getAllPossibleStates().size(); i++) {
-            AState u = searchProblem.getAllPossibleStates().get(i);
+        List<AState> possibleStates = searchProblem.resetPossibleStates();
+        for (AState u : possibleStates) {
             u.setColor(Color.white);
             u.setParent(null);
         }
@@ -34,8 +33,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             if (current.getColor() == Color.white) {
                 current.setColor(Color.gray);
                 current.setDist(time);
-                searchProblem.setPossibleStates(current.getNeighbors());
-                List<AState> adjVertices = searchProblem.getAllPossibleStates();
+                List<AState> adjVertices = searchProblem.getAllPossibleStates(current.getNeighbors());
                 for (AState v : adjVertices) {
                     if (v.getColor() == Color.white)
                     {

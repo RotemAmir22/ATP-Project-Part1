@@ -26,18 +26,16 @@ public class SearchableMaze3D implements ISearchable {
         return null;
     }
 
-    @Override
     public void setPossibleStates(List<AState> states) {
 
     }
 
     @Override
-    public List<AState> getAllPossibleStates() {
-        return null;
-    }
+    public List<AState> getAllPossibleStates(List<AState> list){return null;}
 
     @Override
-    public void resetPossibleStates() {
+    public List<AState> resetPossibleStates() {
 
+        return null;
     }
 }
