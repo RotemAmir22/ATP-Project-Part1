@@ -9,7 +9,6 @@ public abstract class AState {
 
     protected AState parent;
     protected Color color;
-    protected double dist;
     protected int value;
     protected int cost;
     protected LinkedList<AState> neighbors;
@@ -24,7 +23,7 @@ public abstract class AState {
     public int getValue(){return this.value;}
     public AState getParent(){return this.parent;}
     public Color getColor(){return this.color;}
-    public double getDist(){return this.dist;}
+
     public LinkedList<AState> getNeighbors(){return this.neighbors;}
 
     public void addToNeighbors(AState state)
@@ -35,10 +34,6 @@ public abstract class AState {
     public void removeFromNeighbors(AState state)
     {
         neighbors.remove(state);
-    }
-    public void setDist(double d)
-    {
-        this.dist = d;
     }
 
     public void setColor(Color c)

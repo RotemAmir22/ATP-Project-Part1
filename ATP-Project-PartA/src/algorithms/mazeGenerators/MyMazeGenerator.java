@@ -36,18 +36,18 @@ public class MyMazeGenerator extends AMazeGenerator {
 
     /**
      * generates a maze using prim randomized algorithm
-     * @param rows : number of rows in maze
-     * @param colums : number of colums in maze
+     * @param row : number of row in maze
+     * @param column : number of column in maze
      * @return : return built maze
      */
     @Override
-    public Maze generate(int rows, int colums) {
+    public Maze generate(int row, int column) {
 
-        if(rows <= 0 || colums <= 0)
+        if(row <= 0 || column <= 0)
             return null;
 
         // build maze and initialize with only walls
-        Maze maze = new Maze(rows, colums);
+        Maze maze = new Maze(row, column);
         Maze.setAllMazeToWalls(maze);
 
         //set start point

@@ -27,14 +27,10 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         /* initialized the search problem's states */
         List<AState> possibleStates = searchProblem.resetPossibleStates();
         for (AState v : possibleStates) {
-            v.setDist(Double.POSITIVE_INFINITY);
             v.setParent(null);
             v.setColor(Color.white);
         }
         AState v;
-
-        //searchProblem.setStart(searchProblem.getAllPossibleStates().get(0));
-        start.setDist(0);
         start.setParent(null);
         start.setColor(Color.gray);
         Q.add(start);
@@ -45,7 +41,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             for (AState u : possibleStates) {
                 if (u.getColor() == Color.white) {
                     u.setColor(Color.gray);
-                    u.setDist(v.getDist() + 1);
                     u.setParent(v);
                     Q.add(u);
                 }

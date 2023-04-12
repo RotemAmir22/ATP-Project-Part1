@@ -7,8 +7,6 @@ import java.util.Stack;
 /* DFS */
 public class DepthFirstSearch extends ASearchingAlgorithm {
 
-    private int time;
-
     public DepthFirstSearch() {
 
     }
@@ -28,11 +26,9 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
         Stack<AState> stack = new Stack<>();
         stack.push(start);
         while (!stack.isEmpty()) {
-            time++;
             AState current = stack.pop();
             if (current.getColor() == Color.white) {
                 current.setColor(Color.gray);
-                current.setDist(time);
                 List<AState> adjVertices = searchProblem.getAllPossibleStates(current.getNeighbors());
                 for (AState v : adjVertices) {
                     if (v.getColor() == Color.white)
