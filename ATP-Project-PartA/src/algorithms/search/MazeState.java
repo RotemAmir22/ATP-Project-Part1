@@ -23,16 +23,6 @@ public class MazeState extends AState{
     }
 
     public String toString() {
-        return "AState{" +
-                "node=" + this.position +
-                '}';
+        return "(" + this.position.getRowIndex()+','+this.position.getColumnIndex() +')';
     }
-
-
-
-
-
-
-
-
 }

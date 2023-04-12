@@ -61,6 +61,8 @@ public class Maze {
     public Position getGoalPosition() {return endPoint;}
 
     public void print(){
+        System.out.println("Start Position: Position{ row num:0 col num:0}");
+        System.out.println("End Position: Position{ row num:"+this.endPoint.getRowIndex()+" col num:"+ this.endPoint.getColumnIndex()+'}');
         for (int i = 0; i < rows; i++) {
             System.out.print("[");
             for (int j = 0; j < getColoums(); j++) {
