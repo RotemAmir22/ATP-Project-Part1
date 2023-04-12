@@ -72,6 +72,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      */
     @Override
     public Solution solve(ISearchable domain) {
+        if(domain == null || domain.getStart() == null)
+            return null;
         Solution solution = new Solution();
         AState start = domain.getStart();
         BFS(domain, start);
@@ -79,7 +81,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         AState currentState = domain.getGoal();
         while (currentState.getParent() != null) { // run until start (parent is null)
             solution.addToPath(currentState.getParent());
-            //currentState.setCost();
             numOfNode++;
             currentState = currentState.getParent();
         }

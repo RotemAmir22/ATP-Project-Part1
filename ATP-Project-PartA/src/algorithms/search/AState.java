@@ -17,6 +17,7 @@ public abstract class AState {
     public AState(int value)
     {
         this.value = value;
+        this.cost = 0;
         neighbors = new LinkedList<>();
     }
 

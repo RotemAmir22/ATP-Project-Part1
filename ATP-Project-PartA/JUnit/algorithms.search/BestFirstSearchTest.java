@@ -71,17 +71,17 @@ class BestFirstSearchTest {
         ArrayList<AState> solutionPath = solution.getSolutionPath();
         for(int i =0; i< solutionPath.size(); i++)
         {
-            AState currentPos = solutionPath.get(i);
+            MazeState currentPos = (MazeState) solutionPath.get(i);
             //start point
-            if(i==0 && currentPos.node.getRowIndex() != maze.getStartPosition().getRowIndex() && currentPos.node.getColumnIndex() != maze.getStartPosition().getColumnIndex())
+            if(i==0 && currentPos.getPosition().getRowIndex() != maze.getStartPosition().getRowIndex() && currentPos.getPosition().getColumnIndex() != maze.getStartPosition().getColumnIndex())
                 return false;
 
             //end point
-            if(i==solutionPath.size()-1 &&  currentPos.node.getRowIndex() != maze.getGoalPosition().getRowIndex() && currentPos.node.getColumnIndex() != maze.getGoalPosition().getColumnIndex())
+            if(i==solutionPath.size()-1 &&  currentPos.getPosition().getRowIndex() != maze.getGoalPosition().getRowIndex() && currentPos.getPosition().getColumnIndex() != maze.getGoalPosition().getColumnIndex())
                 return false;
 
             //other cells in path
-            if(currentPos.value == 1 && currentPos.value != maze.getCellValue(currentPos.node.getRowIndex(),currentPos.node.getColumnIndex()))
+            if(currentPos.value == 1 && currentPos.value != maze.getCellValue(currentPos.getPosition().getRowIndex(),currentPos.getPosition().getColumnIndex()))
                 return false;
         }
         return true;
