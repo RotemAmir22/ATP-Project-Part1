@@ -50,7 +50,7 @@ public class MyMaze3DGenerator extends AMaze3DGenerator{
             }
             maze3D.setCellInMaze(start[0], start[1], start[2], 0);
         }
-    }
+       }
 
 
     private void setNeighbors(Maze3D maze3D, ArrayList<Position3D> neighbors, Position3D currentP) {
@@ -103,18 +103,16 @@ public class MyMaze3DGenerator extends AMaze3DGenerator{
                 {
                     if(z != currentP.getDepthIndex() || x != currentP.getRowIndex() || y != currentP.getColumnIndex())
                     {
-                        if (z >= 0 &&  z < maze3D.getDepth() && x >= 0 &&  x < maze3D.getRows() &&  y >= 0 && y < maze3D.getColumns()) //in bounds
+                        if (z >= 0 &&  z < maze3D.getDepth() && x >= 0 &&  x < maze3D.getRows() &&  y >= 0 && y < maze3D.getColumns() && !containPosition3D(neighbors, z, x, y) && (maze3D.getCellValue(z,x,y) == 1)) //in bounds
                         {
                             if (z == currentP.getDepthIndex()) // same plain
                             {
                                 if(!(x != currentP.getRowIndex() && y != currentP.getColumnIndex())) // not diagonal
-                                    if (!containPosition3D(neighbors, z, x, y) && (maze3D.getCellValue(z,x,y) == 1))
                                         neighbors.add(new Position3D( z, x, y));
                             }
                             else // different plain
                             {
                                 if(x == currentP.getRowIndex() && y == currentP.getColumnIndex()) // IN or OUT
-                                    if (!containPosition3D(neighbors, z, x, y) && (maze3D.getCellValue(z,x,y) == 1))
                                         neighbors.add(new Position3D( z, x, y));
                             }
                         }

@@ -75,7 +75,8 @@ public class Maze3D {
     }
 
     public void print() {
-
+        System.out.println("Start Position: Position{ depth num:0 row num:0 col num:0 }");
+        System.out.println("End Position: Position{ depth num:0 row num:"+this.endPoint.getRowIndex()+" col num:"+ this.endPoint.getColumnIndex()+'}');
         for(int k=0; k<depth; k++)
         {
             System.out.println("[");
