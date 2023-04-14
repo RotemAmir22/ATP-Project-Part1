@@ -1,8 +1,5 @@
 package algorithms.maze3D;
 
-import algorithms.mazeGenerators.Maze;
-import algorithms.mazeGenerators.Position;
-
 public class Maze3D {
 
     public int[][][] frame;
@@ -54,7 +51,7 @@ public class Maze3D {
     }
 
 
-    public void print() {
+    public void Print() {
         System.out.println("Start Position: Position{ depth num:0 row num:0 col num:0 }");
         System.out.println("End Position: Position{ depth num:0 row num:"+this.endPoint.getRowIndex()+" col num:"+ this.endPoint.getColumnIndex()+'}');
         for(int k=0; k<depth; k++)
@@ -83,4 +80,5 @@ public class Maze3D {
         }
 
     }
+    public int[][][] getMap(){return this.frame;}
 }

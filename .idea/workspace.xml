@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3DState.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3DState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/ISearchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/ISearchable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +203,13 @@
       <option name="project" value="LOCAL" />
       <updated>1681474792327</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL‎00014" summary="RunSearchOnMaze3D and RunMaze3DGenerator created and updated">
+      <created>1681481150713</created>
+      <option name="number" value="LOCAL‎00014" />
+      <option name="presentableId" value="LOCAL‎00014" />
+      <updated>1681481150713</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,7 +240,8 @@
     <MESSAGE value="print maze 2D" />
     <MESSAGE value="print maze 3D" />
     <MESSAGE value="Recursive DFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recursive DFS" />
+    <MESSAGE value="RunSearchOnMaze3D and RunMaze3DGenerator created and updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="RunSearchOnMaze3D and RunMaze3DGenerator created and updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

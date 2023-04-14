@@ -4,7 +4,6 @@ import algorithms.maze3D.IMazeGenerator3D;
 import algorithms.maze3D.Maze3D;
 import algorithms.maze3D.MyMaze3DGenerator;
 import algorithms.maze3D.Position3D;
-import algorithms.mazeGenerators.*;
 
 public class RunMaze3DGenerator {
     public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class RunMaze3DGenerator {
 // generate another maze
         Maze3D maze = mazeGenerator.generate(10,10/*rows*/, 10/*columns*/);
 // prints the maze
-        maze.print();
+        maze.Print();
 // get the maze entrance
         Position3D startPosition = maze.getStartPosition();
 // print the start position
