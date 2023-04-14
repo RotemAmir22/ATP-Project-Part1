@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" afterDir="false" />
-    </list>
+    <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="Recursive DFS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +190,14 @@
       <option name="presentableId" value="LOCAL‎00012" />
       <updated>1681402710602</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Recursive DFS">
+      <created>1681474792327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681474792327</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +227,8 @@
     <MESSAGE value="Create 3D Maze" />
     <MESSAGE value="print maze 2D" />
     <MESSAGE value="print maze 3D" />
-    <option name="LAST_COMMIT_MESSAGE" value="print maze 3D" />
+    <MESSAGE value="Recursive DFS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recursive DFS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

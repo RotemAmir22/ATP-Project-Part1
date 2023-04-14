@@ -5,10 +5,10 @@ import algorithms.mazeGenerators.Position;
 
 public class Maze3D {
 
-    private int[][][] frame;
-    private int depth;
-    private int rows;
-    private int columns;
+    public int[][][] frame;
+    public int depth;
+    public int rows;
+    public int columns;
     private Position3D startPoint;
     private Position3D endPoint;
 
@@ -43,19 +43,6 @@ public class Maze3D {
             this.frame[depth][row][colum] = val;
     }
 
-    public int getRows()
-    {
-        return this.rows;
-    }
-
-    public int getColumns()
-    {
-        return this.columns;
-    }
-    public int[][][] getMap(){
-
-        return this.frame;
-    }
     public Position3D getStartPosition()
     {
 
@@ -66,13 +53,6 @@ public class Maze3D {
         return this.endPoint;
     }
 
-    public int getCellValue(int z, int x, int y) {
-        return this.frame[z][x][y];
-    }
-
-    public int getDepth() {
-        return this.depth;
-    }
 
     public void print() {
         System.out.println("Start Position: Position{ depth num:0 row num:0 col num:0 }");
@@ -82,13 +62,13 @@ public class Maze3D {
             System.out.println("[");
             for (int i = 0; i < rows; i++) {
                 System.out.print("\t[");
-                for (int j = 0; j < getColumns(); j++) {
+                for (int j = 0; j < columns; j++) {
 
                     if (k == 0 && i == 0 && j == 0) {
                         System.out.print("\033[1;93mS\033[0m, "); // 'S' represents the entry point
                     } else if (k== 0 && i == rows-1 && j == columns-1) {
                         System.out.print("\033[1;92mE\033[0m"); // 'E' represents the exit point
-                    } else if (j == getColumns() - 1) {
+                    } else if (j == columns - 1) {
                         System.out.print(this.frame[k][i][j]);
                     }
                     else
