@@ -55,14 +55,12 @@ class BestFirstSearchTest {
     private boolean checkSolution(Solution solution, Maze maze)
     {
         //basic things to check
-        if(solution == null && maze.getStartPosition()!= null)
-            return false;
-        if(solution == null && maze.getGoalPosition()!= null)
-            return false;
-        if(solution != null && maze.getStartPosition()== null)
-            return false;
-        if(solution != null && maze.getGoalPosition()== null)
-            return false;
+        if(solution == null)
+            if(maze.getGoalPosition()!= null || maze.getStartPosition()!= null)
+                return false;
+        if(solution != null)
+            if(maze.getGoalPosition()== null || maze.getStartPosition()== null)
+                return false;
         if(solution == null && maze.getFrame() == null)
             return true;
 
