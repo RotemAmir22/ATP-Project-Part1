@@ -34,27 +34,27 @@ public class SearchableMaze3D implements ISearchable {
             {
                 for(int col = 0; col < m.columns; col++)
                 {
-                    // set the neighbors list
-                    for(int k = -1; k<=1; k++)
-                        for (int i = -1; i <= 1; i++)
-                            for(int j = -1; j <=1; j++)
-                            {
-                                if (k >= 0 &&  k < m.depth && i >= 0 &&  i < m.rows &&  j >= 0 && j < m.columns) //in bounds
-                                    {
-                                        if (k == depth) // same plain
+                        // set the neighbors list
+                        for(int k = depth-1; k<=depth+1; k++)
+                            for (int i = row-1; i <= row+1; i++)
+                                for(int j = col-1; j <=col+1; j++)
+                                {
+                                    if (k >= 0 &&  k < m.depth && i >= 0 &&  i < m.rows &&  j >= 0 && j < m.columns) //in bounds
                                         {
-                                            if(!(i != row && j != col)) // not diagonal
-                                                if (m.frame[k][i][j] == 0)
-                                                    s_maze[depth][row][col].addToNeighbors(s_maze[depth + k][row + i][col + j]);
+                                            if (k == depth) // same plain
+                                            {
+                                                if(!(i != row && j != col)) // not diagonal
+                                                    if (m.frame[k][i][j] == 0)
+                                                        s_maze[depth][row][col].addToNeighbors(s_maze[k][i][j]);
+                                            }
+                                            else // different plain
+                                            {
+                                                if(i == row && j == col) // IN or OUT
+                                                    if (m.frame[k][i][j] == 0)
+                                                        s_maze[depth][row][col].addToNeighbors(s_maze[k][i][j]);
+                                            }
                                         }
-                                        else // different plain
-                                        {
-                                            if(i == row && j == col) // IN or OUT
-                                                if (m.frame[k][i][j] == 0)
-                                                    s_maze[depth][row][col].addToNeighbors(s_maze[depth + k][row + i][col + j]);
-                                        }
-                                    }
-                            }
+                                }
                 }
             }
         setStart(s_maze[0][0][0]);
@@ -79,7 +79,7 @@ public class SearchableMaze3D implements ISearchable {
      * Set the possible states' list
      * @param state to optional solutions
      */
-    public void setPossibleStates(MazeState state)
+    public void setPossibleStates(Maze3DState state)
     {
         if(state.getValue() == 0)
             possibleStates.add(state);
@@ -114,7 +114,7 @@ public class SearchableMaze3D implements ISearchable {
     {
         this.possibleStates = new ArrayList<>();
         for(AState s: states){
-            setPossibleStates((MazeState)s);
+            setPossibleStates((Maze3DState)s);
         }
         return this.possibleStates;
     }

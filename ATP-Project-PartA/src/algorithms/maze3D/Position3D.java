@@ -27,4 +27,9 @@ public class Position3D {
 
         return this.colum;
     }
+
+    @Override
+    public String toString() {
+        return"{"+getDepthIndex()+","+getRowIndex()+","+getColumnIndex()+"}";
+    }
 }

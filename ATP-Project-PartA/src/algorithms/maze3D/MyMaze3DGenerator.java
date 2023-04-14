@@ -30,7 +30,7 @@ public class MyMaze3DGenerator extends AMaze3DGenerator{
         Stack<Position3D> stack = new Stack<>();
         stack.push(new Position3D(depth, row, column));
         while (!stack.isEmpty()) {
-            Position3D current = stack.remove(rand.nextInt(stack.size()));
+            Position3D current = stack.pop();
             if (maze3D.frame[current.getDepthIndex()][current.getRowIndex()][current.getColumnIndex()] == 1) {
                 maze3D.setCellInMaze(current.getDepthIndex(), current.getRowIndex(), current.getColumnIndex(), 0);
                 ArrayList<Position3D> neighbors = getNeighbors(current.getDepthIndex(), current.getRowIndex(), current.getColumnIndex());

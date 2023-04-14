@@ -9,6 +9,5 @@ public interface ISearchable {
      AState getStart();
      AState getGoal();
      List<AState> getAllPossibleStates(List<AState> list);
-
      List<AState> resetPossibleStates();
 }
