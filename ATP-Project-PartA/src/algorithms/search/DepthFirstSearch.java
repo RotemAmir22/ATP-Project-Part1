@@ -4,12 +4,12 @@ import java.awt.*;
 import java.util.List;
 import java.util.Stack;
 
-/* DFS */
+/**
+ * DFS search algorithms
+ * solves the problem using AStates
+ */
 public class DepthFirstSearch extends ASearchingAlgorithm {
 
-    public DepthFirstSearch() {
-
-    }
 
     /**
      * DFS algorithm
@@ -23,6 +23,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
             u.setColor(Color.white);
             u.setParent(null);
         }
+
         Stack<AState> stack = new Stack<>();
         stack.push(start);
         while (!stack.isEmpty()) {
@@ -47,17 +48,20 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
         return "Depth First Search";
     }
 
-    @Override
-    public int getNumberOfNodesEvaluated() {
-        return numOfNode;
-    }
-
+    /**
+     * Use DFS algorithm and return a solution
+     *
+     * @param domain the problem for solving
+     * @return a new solution for this problem
+     */
     @Override
     public Solution solve(ISearchable domain) {
         DFS(domain, domain.getStart());
         Solution solution = new Solution();
         solution.addToPath(domain.getGoal()); // start from the end to promise a legal path
         AState currentState = domain.getGoal();
+
+        //backtrack to get solution path
         while (currentState.getParent() != null) { // run until start (parent is null)
             solution.addToPath(currentState.getParent());
             numOfNode++;

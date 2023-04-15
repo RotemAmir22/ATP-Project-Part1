@@ -1,18 +1,23 @@
 package algorithms.search;
 
-import algorithms.mazeGenerators.Position;
-
 import java.awt.*;
 import java.util.LinkedList;
 
+/**
+ * Class that represents a state in the solution path of search
+ * makes each state hold it neighbours which represents possible routes in the solution
+ * Includes the parent state, color(white, grey or black), value and cost.
+ */
 public abstract class AState {
 
+    //variables
     protected AState parent;
     protected Color color;
     protected int value;
     protected int cost;
     protected LinkedList<AState> neighbors;
 
+    //constructor
     public AState(int value)
     {
         this.value = value;
@@ -20,22 +25,14 @@ public abstract class AState {
         neighbors = new LinkedList<>();
     }
 
+    //get methods
     public int getValue(){return this.value;}
     public AState getParent(){return this.parent;}
     public Color getColor(){return this.color;}
-
     public LinkedList<AState> getNeighbors(){return this.neighbors;}
+    public int getCost(){return this.cost;}
 
-    public void addToNeighbors(AState state)
-    {
-        neighbors.add(state);
-    }
-
-    public void removeFromNeighbors(AState state)
-    {
-        neighbors.remove(state);
-    }
-
+    //set methods
     public void setColor(Color c)
     {
         this.color = c;
@@ -48,6 +45,14 @@ public abstract class AState {
     {
         this.cost = cost;
     }
-    public int getCost(){return this.cost;}
 
+    //methods regarding neighbours
+    public void addToNeighbors(AState state)
+    {
+        neighbors.add(state);
+    }
+    public void removeFromNeighbors(AState state)
+    {
+        neighbors.remove(state);
+    }
 }

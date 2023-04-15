@@ -5,9 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/* BFS */
+/**
+ * BFS search algorithms
+ * solves the problem using AStates
+ */
 public class BreadthFirstSearch extends ASearchingAlgorithm {
 
+    //variables
     protected Queue<AState> Q;
 
     /**
@@ -21,7 +25,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
      * BFS algorithm
      *
      * @param searchProblem that we want to solve
-     * @param start         point
+     * @param start point
      */
     private void BFS(ISearchable searchProblem, AState start) {
         /* initialized the search problem's states */
@@ -30,6 +34,7 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
             v.setParent(null);
             v.setColor(Color.white);
         }
+
         AState v;
         start.setParent(null);
         start.setColor(Color.gray);
@@ -54,11 +59,6 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         return "Breadth First Search";
     }
 
-    @Override
-    public int getNumberOfNodesEvaluated() {
-        return numOfNode;
-    }
-
     /**
      * Use BFS algorithm and return a solution
      *
@@ -74,6 +74,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         BFS(domain, start);
         solution.addToPath(domain.getGoal()); // start from the end to promise a legal path
         AState currentState = domain.getGoal();
+
+        //backtrack to get solution path
         while (currentState.getParent() != null) { // run until start (parent is null)
             solution.addToPath(currentState.getParent());
             numOfNode++;
