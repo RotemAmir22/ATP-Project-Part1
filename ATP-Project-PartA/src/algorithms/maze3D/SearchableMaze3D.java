@@ -1,7 +1,6 @@
 package algorithms.maze3D;
 import algorithms.search.AState;
 import algorithms.search.ISearchable;
-import algorithms.search.MazeState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +25,7 @@ public class SearchableMaze3D implements ISearchable {
         for(int k = 0; k< m.depth; k++)
             for (int i = 0; i < m.rows; i ++){
                 for(int j = 0; j < m.columns; j++){
-                    s_maze[k][i][j]=new Maze3DState(new Position3D(k,i,j),maze.frame[k][i][j]);
+                    s_maze[k][i][j]=new Maze3DState(new Position3D(k,i,j),maze.getMap()[k][i][j]);
                 }
             }
         for(int depth = 0; depth< m.depth; depth++)
@@ -44,13 +43,13 @@ public class SearchableMaze3D implements ISearchable {
                                             if (k == depth) // same plain
                                             {
                                                 if(!(i != row && j != col)) // not diagonal
-                                                    if (m.frame[k][i][j] == 0)
+                                                    if (m.getMap()[k][i][j] == 0)
                                                         s_maze[depth][row][col].addToNeighbors(s_maze[k][i][j]);
                                             }
                                             else // different plain
                                             {
                                                 if(i == row && j == col) // IN or OUT
-                                                    if (m.frame[k][i][j] == 0)
+                                                    if (m.getMap()[k][i][j] == 0)
                                                         s_maze[depth][row][col].addToNeighbors(s_maze[k][i][j]);
                                             }
                                         }

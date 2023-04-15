@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/AMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/AMaze3DGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/IMazeGenerator3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/IMazeGenerator3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3DState.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3DState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/MyMaze3DGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/ISearchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/ISearchable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/AMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/AMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/IMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/IMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/search/SearchableMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,11 +251,6 @@
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/SearchableMaze3D.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

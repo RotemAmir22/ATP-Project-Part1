@@ -7,23 +7,23 @@ public class SimpleMazeGenerator extends AMazeGenerator{
     /**
      * crates a simple maze that has at least one route from start to end
      * @param rows: number of rows in maze
-     * @param colums: number of columns in maze
+     * @param column: number of columns in maze
      * @return : maze built
      */
     @Override
-    public Maze generate(int rows, int colums) {
+    public Maze generate(int rows, int column) {
 
-        if(rows <= 0 || colums <= 0)
+        if(rows <= 0 || column <= 0)
             return null;
 
-        Maze maze = new Maze(rows, colums);
+        Maze maze = new Maze(rows, column);
         Maze.setAllMazeToWalls(maze);
 
         //set start point
         maze.setCellInMaze(0,0,0);
 
         //set end point
-        maze.setCellInMaze(maze.getRows() -1, maze.getColoums()-1,0);
+        maze.setCellInMaze(maze.getRows() -1, maze.getColumn()-1,0);
 
         //create a path in the maze
         createPath(maze);
@@ -44,7 +44,7 @@ public class SimpleMazeGenerator extends AMazeGenerator{
     {
         Random random = new Random();
         for (int row = 0; row < maze.getRows(); row++) {
-            for (int col = 0; col < maze.getColoums(); col++) {
+            for (int col = 0; col < maze.getColumn(); col++) {
                 if(maze.getCellValue(row,col)==1)//if not in path
                     maze.setCellInMaze(row,col, random.nextInt(2));
             }

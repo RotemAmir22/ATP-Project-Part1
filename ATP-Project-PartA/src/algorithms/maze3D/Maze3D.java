@@ -1,14 +1,25 @@
 package algorithms.maze3D;
 
+/**
+ * 3D Maze
+ * like in 2D, the 3D maze had frame, start and end point.
+ */
 public class Maze3D {
 
-    public int[][][] frame;
+    private int[][][] frame;
     public int depth;
     public int rows;
     public int columns;
     private Position3D startPoint;
     private Position3D endPoint;
 
+    /**
+     * Constructor
+     * @param depth of new maze
+     * @param row of new maze
+     * @param column of new maze
+     * Initialize the start (0,0,0) and end point (0,row-1,column-1)
+     */
     public Maze3D(int depth, int row, int column)
     {
         this.frame = new int[depth][row][column];
@@ -19,6 +30,10 @@ public class Maze3D {
         endPoint = new Position3D(0,row - 1 ,column -1);
     }
 
+    /**
+     * function that makes all maze to walls
+     * @param maze to transform all the cells to walls (1)
+     */
     public static void setAllMazeToWalls(Maze3D maze)
     {
         for(int k=0; k<maze.depth; k++)
@@ -34,23 +49,42 @@ public class Maze3D {
 
     }
 
+    /**
+     * function that set a cell in maze to 0 or 1 (val)
+     * @param depth of the maze
+     * @param row of the maze
+     * @param colum of the maze
+     * @param val to set
+     */
     public void setCellInMaze(int depth, int row, int colum, int val)
     {
         if(0 <= depth && depth <= this.depth && 0 <= row && row < this.rows && 0 <= colum && colum < this.columns)
             this.frame[depth][row][colum] = val;
     }
 
+    /**
+     *
+     * @return the start position
+     */
     public Position3D getStartPosition()
     {
 
         return this.startPoint;
     }
+
+    /**
+     *
+     * @return the goal position
+     */
     public Position3D getGoalPosition(){
 
         return this.endPoint;
     }
 
 
+    /**
+     * function that print the maze by the required format
+     */
     public void Print() {
         System.out.println("Start Position: Position{ depth num:0 row num:0 col num:0 }");
         System.out.println("End Position: Position{ depth num:0 row num:"+this.endPoint.getRowIndex()+" col num:"+ this.endPoint.getColumnIndex()+'}');
@@ -80,5 +114,10 @@ public class Maze3D {
         }
 
     }
+
+    /**
+     *
+     * @return the frame of the maze
+     */
     public int[][][] getMap(){return this.frame;}
 }

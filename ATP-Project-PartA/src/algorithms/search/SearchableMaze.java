@@ -4,7 +4,6 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class SearchableMaze implements ISearchable{
@@ -28,21 +27,21 @@ public class SearchableMaze implements ISearchable{
         this.maze = m;
         this.start = new MazeState(m.getStartPosition(), 0);
         this.goal = new MazeState(m.getGoalPosition(), 0);
-        this.s_maze = new MazeState[m.getRows()][m.getColoums()];
+        this.s_maze = new MazeState[m.getRows()][m.getColumn()];
         for (int i = 0; i < m.getRows(); i ++){
-            for(int j = 0; j < m.getColoums(); j++){
+            for(int j = 0; j < m.getColumn(); j++){
                 s_maze[i][j]=new MazeState(new Position(i,j),maze.getCellValue(i,j));
             }
         }
         for(int row = 0; row < m.getRows(); row ++)
         {
-            for(int col = 0; col < m.getColoums(); col++)
+            for(int col = 0; col < m.getColumn(); col++)
             {
                 // set the neighbors list
                 for (int i = -1; i <= 1; i++)
                     for(int j = -1; j <=1; j++)
                     {
-                        if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColoums())
+                        if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColumn())
                             if(!(i ==0 && j==0))
                                 if(s_maze[row + i][col + j].value == 0)
                                     s_maze[row][col].addToNeighbors(s_maze[row + i][col + j]);
@@ -51,7 +50,7 @@ public class SearchableMaze implements ISearchable{
         }
         checkNeighbours();
         setStart(s_maze[0][0]);
-        setGoal(s_maze[maze.getRows()-1][maze.getColoums()-1]);
+        setGoal(s_maze[maze.getRows()-1][maze.getColumn()-1]);
     }
 
     /**
@@ -62,14 +61,14 @@ public class SearchableMaze implements ISearchable{
     {
         for(int row = 0; row < this.maze.getRows(); row ++)
         {
-            for(int col = 0; col < this.maze.getColoums(); col++)
+            for(int col = 0; col < this.maze.getColumn(); col++)
             {
                 //check the neighbors list only diagonals
                 for (int i = -1; i <= 1; i++)
                 {
                     for(int j = -1; j <=1; j++)
                     {
-                        if(0 <= (row + i) && (row + i) < this.maze.getRows() && 0 <= (col + j) && (col + j) < this.maze.getColoums())
+                        if(0 <= (row + i) && (row + i) < this.maze.getRows() && 0 <= (col + j) && (col + j) < this.maze.getColumn())
                             if(row != row+i && col != col +j)
                             {
                                 if(!checkCommonNeighbour(this.s_maze[row][col],this.s_maze[row+i][col+j]))
@@ -104,7 +103,7 @@ public class SearchableMaze implements ISearchable{
     {
         this.possibleStates = new ArrayList<>();
         for (int i = 0; i < maze.getRows(); i ++){
-            for(int j = 0; j < maze.getColoums(); j++){
+            for(int j = 0; j < maze.getColumn(); j++){
                 if(s_maze[i][j].value == 0)
                     possibleStates.add(s_maze[i][j]);
             }
