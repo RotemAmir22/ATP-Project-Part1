@@ -1,5 +1,8 @@
 package algorithms.maze3D;
 
+/**
+ * Interface that make any class incinerate this interface to implement these functions
+ */
 public interface IMazeGenerator3D {
 
     Maze3D generate(int depth, int row, int column);
