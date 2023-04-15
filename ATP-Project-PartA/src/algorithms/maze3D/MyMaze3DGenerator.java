@@ -1,5 +1,6 @@
 package algorithms.maze3D;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Stack;
 
@@ -42,6 +43,7 @@ public class MyMaze3DGenerator extends AMaze3DGenerator{
             if (maze3D.getMap()[current.getDepthIndex()][current.getRowIndex()][current.getColumnIndex()] == 1) { // its wall
                 maze3D.setCellInMaze(current.getDepthIndex(), current.getRowIndex(), current.getColumnIndex(), 0); // open the wall
                 ArrayList<Position3D> neighbors = getNeighbors(current.getDepthIndex(), current.getRowIndex(), current.getColumnIndex()); // get the neighbors
+                Collections.shuffle(neighbors);
                 for (Position3D neighbor : neighbors) { // run on the neighbors list
                     if (maze3D.getMap()[neighbor.getDepthIndex()][neighbor.getRowIndex()][neighbor.getColumnIndex()] == 1) { // its wall
                         /* took the middle between the two walls and open it */
