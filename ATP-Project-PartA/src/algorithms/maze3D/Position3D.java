@@ -57,6 +57,6 @@ public class Position3D {
      */
     @Override
     public String toString() {
-        return"{"+getDepthIndex()+","+getRowIndex()+","+getColumnIndex()+"}";
+        return "Position{ depth num:"+ this.getDepthIndex() +" row num:"+this.getRowIndex()+" col num:"+ this.getColumnIndex()+"}";
     }
 }

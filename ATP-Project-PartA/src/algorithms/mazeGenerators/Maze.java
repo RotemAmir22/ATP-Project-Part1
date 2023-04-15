@@ -84,8 +84,6 @@ public class Maze {
      * Print function by the required format
      */
     public void Print(){
-        System.out.println("Start Position: Position{ row num:0 col num:0}");
-        System.out.println("End Position: Position{ row num:"+this.endPoint.getRowIndex()+" col num:"+ this.endPoint.getColumnIndex()+'}');
         for (int i = 0; i < rows; i++) {
             System.out.print("[");
             for (int j = 0; j < getColumn(); j++) {
