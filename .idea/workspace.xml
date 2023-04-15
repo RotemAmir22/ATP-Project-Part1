@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Position3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ATP-Project-PartA/algorithms/mazeGenerators/Maze.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +31,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.RunSearchOnMaze3D">
+  <component name="RunManager" selected="Application.RunMaze3DGenerator">
     <configuration name="RunMaze3DGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.RunMaze3DGenerator" />
       <module name="ATP-Project-PartA" />
@@ -109,10 +101,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunMaze3DGenerator" />
         <item itemvalue="Application.RunSearchOnMaze3D" />
         <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="Application.RunMaze3DGenerator" />
         <item itemvalue="JUnit.BestFirstSearchTest" />
       </list>
     </recent_temporary>
@@ -216,7 +208,13 @@
       <option name="presentableId" value="LOCAL‎00014" />
       <updated>1681577315483</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL‎00015" summary="Print methods format fixed">
+      <created>1681578610666</created>
+      <option name="number" value="LOCAL‎00015" />
+      <option name="presentableId" value="LOCAL‎00015" />
+      <updated>1681578610666</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +246,8 @@
     <MESSAGE value="print maze 3D" />
     <MESSAGE value="Recursive DFS" />
     <MESSAGE value="docString search package" />
-    <option name="LAST_COMMIT_MESSAGE" value="docString search package" />
+    <MESSAGE value="Print methods format fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Print methods format fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
