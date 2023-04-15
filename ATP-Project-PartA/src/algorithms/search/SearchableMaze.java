@@ -34,11 +34,11 @@ public class SearchableMaze implements ISearchable{
         this.goal = new MazeState(m.getGoalPosition(), 0);
 
         //searchable maze built base on the original maze
-        this.s_maze = new MazeState[m.getRows()][m.getColoums()];
+        this.s_maze = new MazeState[m.getRows()][m.getColumn()];
 
         //convert all cells to maze state
         for (int i = 0; i < m.getRows(); i ++){
-            for(int j = 0; j < m.getColoums(); j++){
+            for(int j = 0; j < m.getColumn(); j++){
                 s_maze[i][j]=new MazeState(new Position(i,j),maze.getCellValue(i,j));
             }
         }
@@ -46,14 +46,14 @@ public class SearchableMaze implements ISearchable{
         //set maze sate neighbours in s_maze
         for(int row = 0; row < m.getRows(); row ++)
         {
-            for(int col = 0; col < m.getColoums(); col++)
+            for(int col = 0; col < m.getColumn(); col++)
             {
                 // set the neighbors list
                 for (int i = -1; i <= 1; i++)
                     for(int j = -1; j <=1; j++)
                     {
                         //check bounds
-                        if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColoums())
+                        if(0 <= (row + i) && (row + i) < m.getRows() && 0 <= (col + j) && (col + j) < m.getColumn())
                             if(!(i == 0 && j == 0)) // check if not the same maze state
                                 if(s_maze[row + i][col + j].value == 0) //path
                                     s_maze[row][col].addToNeighbors(s_maze[row + i][col + j]);
@@ -66,7 +66,7 @@ public class SearchableMaze implements ISearchable{
 
         //set start and goal state in s_maze
         setStart(s_maze[0][0]);
-        setGoal(s_maze[maze.getRows()-1][maze.getColoums()-1]);
+        setGoal(s_maze[maze.getRows()-1][maze.getColumn()-1]);
     }
 
     /**
@@ -77,7 +77,7 @@ public class SearchableMaze implements ISearchable{
     {
         for(int row = 0; row < this.maze.getRows(); row ++)
         {
-            for(int col = 0; col < this.maze.getColoums(); col++)
+            for(int col = 0; col < this.maze.getColumn(); col++)
             {
                 //check the neighbors list only diagonals
                 for (int i = -1; i <= 1; i++)
@@ -85,7 +85,7 @@ public class SearchableMaze implements ISearchable{
                     for(int j = -1; j <=1; j++)
                     {
                         //check bounds
-                        if(0 <= (row + i) && (row + i) < this.maze.getRows() && 0 <= (col + j) && (col + j) < this.maze.getColoums())
+                        if(0 <= (row + i) && (row + i) < this.maze.getRows() && 0 <= (col + j) && (col + j) < this.maze.getColumn())
                             //if diagonal to position
                             if(row != row+i && col != col +j)
                             {
@@ -127,7 +127,7 @@ public class SearchableMaze implements ISearchable{
     {
         this.possibleStates = new ArrayList<>();
         for (int i = 0; i < maze.getRows(); i ++){
-            for(int j = 0; j < maze.getColoums(); j++){
+            for(int j = 0; j < maze.getColumn(); j++){
                 if(s_maze[i][j].value == 0)
                     possibleStates.add(s_maze[i][j]);
             }
