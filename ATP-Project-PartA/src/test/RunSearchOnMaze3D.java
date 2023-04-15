@@ -12,7 +12,7 @@ public class RunSearchOnMaze3D {
 
     public static void main(String[] args) {
         IMazeGenerator3D mg3D = new MyMaze3DGenerator();
-        Maze3D maze3D = mg3D.generate(30, 30, 30);
+        Maze3D maze3D = mg3D.generate(25, 25, 25);
         maze3D.Print();
         SearchableMaze3D searchableMaze = new SearchableMaze3D(maze3D);
         solveProblem(searchableMaze, new BreadthFirstSearch());
