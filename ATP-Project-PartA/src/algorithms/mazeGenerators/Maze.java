@@ -83,7 +83,7 @@ public class Maze {
     /**
      * Print function by the required format
      */
-    public void Print(){
+    public void print(){
         for (int i = 0; i < rows; i++) {
             System.out.print("[");
             for (int j = 0; j < getColumn(); j++) {

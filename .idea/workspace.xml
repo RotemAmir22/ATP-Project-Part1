@@ -6,7 +6,52 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="" />
+    <list default="true" id="75a91ea9-aeb1-421c-abd1-913d933791cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ATP_Project_PartA_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ATP_Project_PartA_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/artifacts/ATP_Project_PartA_jar/ATP-Project-PartA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/ATP-Project-PartA1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/AMaze3DGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/IMazeGenerator3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/Maze3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/Maze3DState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/MyMaze3DGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/Position3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/maze3D/SearchableMaze3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/AMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/EmptyMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/IMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/MyMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/mazeGenerators/SimpleMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/ASearchingAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/AState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/BestFirstSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/BreadthFirstSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/DepthFirstSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/ISearchable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/ISearchingAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/MazeState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/SearchableMaze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/algorithms/search/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/test/GeneralCheckingFunctions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/test/RunMaze3DGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/test/RunMazeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/test/RunSearchOnMaze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/production/ATP-Project-PartA/test/RunSearchOnMaze3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/out/test/ATP-Project-PartA/algorithms/search/BestFirstSearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/ATP-Project-PartA1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMaze3DGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA/src/test/RunSearchOnMaze3D.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +82,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -113,9 +159,9 @@
       <list>
         <item itemvalue="Application.RunSearchOnMaze3D" />
         <item itemvalue="Application.RunMaze3DGenerator" />
+        <item itemvalue="JUnit.BestFirstSearchTest" />
         <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="JUnit.BestFirstSearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +283,19 @@
       <option name="project" value="LOCAL" />
       <updated>1681584292562</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL‎00018" summary="jar file">
+      <created>1681584913674</created>
+      <option name="number" value="LOCAL‎00018" />
+      <option name="presentableId" value="LOCAL‎00018" />
+      <updated>1681584913674</updated>
+    </task>
+    <task id="LOCAL‎00019" summary="jar file">
+      <created>1681585003706</created>
+      <option name="number" value="LOCAL‎00019" />
+      <option name="presentableId" value="LOCAL‎00019" />
+      <updated>1681585003706</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,7 +329,8 @@
     <MESSAGE value="docString search package" />
     <MESSAGE value="Print methods format fixed" />
     <MESSAGE value="docstring" />
-    <option name="LAST_COMMIT_MESSAGE" value="docstring" />
+    <MESSAGE value="jar file" />
+    <option name="LAST_COMMIT_MESSAGE" value="jar file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

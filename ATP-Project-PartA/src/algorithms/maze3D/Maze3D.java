@@ -85,7 +85,7 @@ public class Maze3D {
     /**
      * function that print the maze by the required format
      */
-    public void Print() {
+    public void print() {
         for(int k=0; k<depth; k++)
         {
             System.out.println("[");

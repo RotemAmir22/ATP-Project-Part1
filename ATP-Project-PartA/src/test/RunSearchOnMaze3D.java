@@ -13,7 +13,7 @@ public class RunSearchOnMaze3D {
     public static void main(String[] args) {
         IMazeGenerator3D mg3D = new MyMaze3DGenerator();
         Maze3D maze3D = mg3D.generate(25, 25, 25);
-        maze3D.Print();
+        maze3D.print();
         SearchableMaze3D searchableMaze = new SearchableMaze3D(maze3D);
         solveProblem(searchableMaze, new BreadthFirstSearch());
         solveProblem(searchableMaze, new DepthFirstSearch());
