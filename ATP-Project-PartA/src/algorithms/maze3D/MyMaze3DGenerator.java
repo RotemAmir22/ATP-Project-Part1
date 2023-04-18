@@ -19,7 +19,7 @@ public class MyMaze3DGenerator extends AMaze3DGenerator{
      */
     @Override
     public Maze3D generate(int depth, int row, int column) {
-        if(depth <=0 || row <= 0 || column <= 0)
+        if(depth <=1 || row <= 1 || column <= 1)
             return null;
         maze3D = new Maze3D(depth, row, column);
         Maze3D.setAllMazeToWalls(maze3D);

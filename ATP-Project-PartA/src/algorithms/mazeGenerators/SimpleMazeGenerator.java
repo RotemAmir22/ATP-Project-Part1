@@ -13,7 +13,7 @@ public class SimpleMazeGenerator extends AMazeGenerator{
     @Override
     public Maze generate(int rows, int column) {
 
-        if(rows <= 0 || column <= 0)
+        if(rows <= 1 || column <= 1)
             return null;
 
         Maze maze = new Maze(rows, column);

@@ -43,7 +43,7 @@ public class MyMazeGenerator extends AMazeGenerator {
     @Override
     public Maze generate(int row, int column) {
 
-        if(row <= 0 || column <= 0)
+        if(row <= 1 || column <= 1)
             return null;
 
         // build maze and initialize with only walls
