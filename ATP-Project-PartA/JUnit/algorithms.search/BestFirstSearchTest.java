@@ -94,13 +94,13 @@ class BestFirstSearchTest {
         solution=bestFirstSearch.solve(null);
         assert (solution == null);
         solution=bestFirstSearch.solve(s_mEmpty1);
-        assert (solution == null);//0X0
+        assert (checkSolution(solution, emptyMaze1));//0X0
         solution=bestFirstSearch.solve(s_mEmpty3);
-        assert (solution==null);//-5X-5
+        assert (checkSolution(solution, emptyMaze3));//-5X-5
         solution=bestFirstSearch.solve(s_mSimple3);
-        assert (solution==null);//-5X-5
+        assert (checkSolution(solution, simpleMaze3));//-5X-5
         solution=bestFirstSearch.solve(s_mMyMaze3);
-        assert (solution==null);//-5X-5
+        assert (checkSolution(solution, MyMaze3));//-5X-5
 
         // check empty mazes
         solution = bestFirstSearch.solve(s_mEmpty2);

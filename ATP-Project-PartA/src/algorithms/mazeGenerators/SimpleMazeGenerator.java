@@ -13,8 +13,10 @@ public class SimpleMazeGenerator extends AMazeGenerator{
     @Override
     public Maze generate(int rows, int column) {
 
-        if(rows <= 1 || column <= 1)
-            return null;
+        if(rows <= 1 && column <= 1){
+            rows = 1;
+            column = 1; // minimum default
+        }
 
         Maze maze = new Maze(rows, column);
         Maze.setAllMazeToWalls(maze);

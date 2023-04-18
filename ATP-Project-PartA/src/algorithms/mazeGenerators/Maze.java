@@ -89,7 +89,10 @@ public class Maze {
             for (int j = 0; j < getColumn(); j++) {
 
                 if (i == 0 && j == 0) {
-                    System.out.print("\033[1;93mS\033[0m, "); // 'S' represents the entry point
+                    if(i == getColumn() - 1)
+                        System.out.print("\033[1;93mS\033[0m");
+                    else
+                        System.out.print("\033[1;93mS\033[0m, "); // 'S' represents the entry point
                 } else if (i == rows-1 && j == column -1) {
                     System.out.print("\033[1;92mE\033[0m"); // 'E' represents the exit point
                 } else if (j == getColumn() - 1) {
